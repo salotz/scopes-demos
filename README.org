@@ -1,1 +1,9 @@
-Random demos in Scopes.
+
+** Setting Up Envs for Each of Them
+
+#+begin_src bash
+  cd XXX_demo-name
+  spack env create -d .
+  spacktivate .
+  spack install
+#+end_src
