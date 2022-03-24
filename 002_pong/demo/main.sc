@@ -3,7 +3,7 @@
 using import struct
 using import Array
 
-let rl = (import ..src.raylib)
+let rl = (import raylib.raylib)
 using rl.macros
 
 ## Screen
@@ -17,7 +17,7 @@ let
 
 let
     BACKGROUND_COLOR = rl.Colors.LIGHTGRAY
-    BALL_SPEED = 350.0
+    BALL_SPEED = 1000.0
     BALL_RADIUS = 10
     BALL_COLOR = rl.Colors.WHITE
     PADDLE_SPEED = 200.0
