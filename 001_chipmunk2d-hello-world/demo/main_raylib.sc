@@ -1,8 +1,8 @@
 using import struct
 using import Array
 
-let cp = (import .src.chipmunk2d)
-let rl = (import ..src.raylib)
+let cp = (import .chipmunk2d)
+let rl = (import raylib.raylib)
 using rl.macros
 
 ## Screen

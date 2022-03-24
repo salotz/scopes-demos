@@ -4,6 +4,6 @@
 #+begin_src bash
   cd XXX_demo-name
   spack env create -d .
+  spack -e . install
   spacktivate .
-  spack install
 #+end_src

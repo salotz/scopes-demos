@@ -1,7 +1,7 @@
-let pkg = (import ..pkg)
+let rl = (import raylib.raylib)
 
-let cp = (import .src.chipmunk2d)
-let rl = (import ..src.raylib)
+let cp = (import .chipmunk2d)
+
 
 # let cpvzero = (cp.Vect 0.0 0.0)
 

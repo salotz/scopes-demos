@@ -3,7 +3,6 @@
 # It describes a set of packages to be installed, along with
 # configuration settings.
 spack:
-  # add package specs to the `specs` list
   specs:
   - chipmunk2d
   - scopes-raylib ^font-util fonts=encodings

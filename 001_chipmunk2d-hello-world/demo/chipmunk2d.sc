@@ -1,5 +1,5 @@
-# this loads the site specific packaging information
-let pkg = (import ..pkg)
+let header = (include "chipmunk/chipmunk.h")
+load-library "libchipmunk.so"
 
 inline filter-scope (scope pattern)
     """"For a scope match the pattern to a symbol prefix and remove it from the outputted
@@ -12,18 +12,6 @@ inline filter-scope (scope pattern)
             'bind scope (Symbol (rslice name end)) v
         else
             scope
-
-
-let header =
-    include
-        "chipmunk/chipmunk.h"
-        options
-            # "-v"
-            .. "-I" pkg.include-path
-
-let lib-path = (.. pkg.lib-path "/libchipmunk.so")
-
-load-library lib-path
 
 # ## dump the namespaces for the differnt header things
 let chipmunk =
