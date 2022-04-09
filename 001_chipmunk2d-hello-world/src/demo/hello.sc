@@ -1,11 +1,9 @@
-let rl = (import raylib.raylib)
+# hello world for chipmunk translated from C
 
-let cp = (import .chipmunk2d)
+let cp = (import chipmunk2d.chipmunk2d)
 
 
-# let cpvzero = (cp.Vect 0.0 0.0)
-
-let cpvzero = (rl.Vector2 0.0 0.0)
+let cpvzero = (cp.Vect 0.0 0.0)
 
 let gravity =
     cp.Vect
