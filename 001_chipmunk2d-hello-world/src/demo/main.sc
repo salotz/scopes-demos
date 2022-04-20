@@ -3,33 +3,12 @@
 using import Array
 using import String
 
-let C.unistd = (include "unistd.h")
-let C.time = (include "time.h")
-
-let sleep! = (C.unistd . extern . sleep)
-
-inline get-time ()
-    C.time.extern.time null
-
 let cp = (import chipmunk2d.chipmunk2d)
 let rl = (import raylib.raylib)
 using rl.macros
 
-using import .lib
-
-let
-    cpVec = cp.Vect
-    rlVec = rl.Vector2
-
-fn cp-to-rl-vec (cp-vec)
-    rlVec
-        ((cp-vec . x) as f32)
-        ((cp-vec . y) as f32)
-
-fn rl-to-cp-vec (rl-vec)
-    cpVec
-        ((rl-vec . x) as f64)
-        ((rl-vec . y) as f64)
+using import .structs
+using import .util
 
 ### Scene
 
@@ -167,13 +146,15 @@ fn draw-ball (ball)
     ;
 
 
-## Simulation
+local scene =
+    Scene
+        ground = ground
+        ball = ball
 
-# scene
-# local scene =
-#     Scene
-#         ground = ground
-#         ball = ball
+fn draw-scene (scene)
+    (draw-ball scene.ball)
+    (draw-ground scene.ground)
+    ;
 
 # camera
 local camera =
@@ -183,36 +164,13 @@ local camera =
         0.0:f32
         1.0:f32
 
-local t = 0.0:f64
-local dt = 0.1:f64
-local accumulator = 0.0:f64
-
-local current_time = ((get-time) as f64)
-
 do-window:
     SCREEN_WIDTH
     SCREEN_HEIGHT
     "Chipmunk2D: Hello World"
     FPS
 
-    local new_time = ((get-time) as f64)
-
-    local frame_time = (new_time - current_time)
-
-    # if (frame_time > 0.25)
-    #     frame_time = 0.25
-
-    current_time = new_time
-
-    accumulator += frame_time
-
-    # TODO: implement blending
-
-    while (accumulator >= dt)
-        (cp.SpaceStep space TIME_STEP)
-
-        accumulator -= dt
-        t += dt
+    (cp.SpaceStep space TIME_STEP)
 
     do-draw:
 
@@ -222,8 +180,7 @@ do-window:
         # Do 2D drawing
         rl.BeginMode2D camera
 
-        (draw-ball ball)
-        (draw-ground ground)
+        (draw-scene scene)
 
         rl.EndMode2D;
 

@@ -10,6 +10,9 @@ struct Ground
     thickness : f32
     shape : (pointer cp.Shape)
 
+    fn show-color (self)
+        print self.color
+
 struct Ball
     color : rl.Color
     shape : (pointer cp.Shape)
