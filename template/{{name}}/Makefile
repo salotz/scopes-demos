@@ -1,6 +1,6 @@
 .spack-env: spack.yaml
 	spack env create -d .
-	spack -e . install
+	spack -e . install --reuse
 
 clean:
 	rm -rf .spack-env
