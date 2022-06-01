@@ -4,7 +4,7 @@
 # configuration settings.
 spack:
   specs:
-  - scopes@0.18
+  - scopes@0.17
   - scopes-chipmunk2d
   - scopes-raylib ^font-util fonts=encodings
   view: true

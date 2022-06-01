@@ -1,3 +1,6 @@
+run:
+	scopes -e -m demo.main
+
 .spack-env: spack.yaml
 	spack env create -d .
 	spack -e . install --reuse
