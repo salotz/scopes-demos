@@ -3,8 +3,12 @@
 using import struct
 using import Array
 
+let cp = (import chipmunk2d.chipmunk2d)
 let rl = (import raylib.raylib)
 using rl.macros
+
+using import .structs
+using import .util
 
 ## Screen
 let
@@ -12,113 +16,52 @@ let
     SCREEN_HEIGHT = 800
     FPS = 60
 
+let SCREEN_CENTER =
+    rl.Vector2
+        (SCREEN_WIDTH / 2)
+        (SCREEN_HEIGHT / 2)
+
 
 ## Game constants
 
 let
     BACKGROUND_COLOR = rl.Colors.LIGHTGRAY
-    BALL_SPEED = 1000.0
+
+    # Ball: the only actual physics body
+    # BALL_SPEED = 1000.0
     BALL_RADIUS = 10
     BALL_COLOR = rl.Colors.WHITE
+    BALL_MASS = 1
+    BALL_FRICTION = 0.7
+    BALL_ELASTICITY = 1.0
+
+    # player paddles
     PADDLE_SPEED = 200.0
     PADDLE_WIDTH = 10
     PADDLE_LENGTH = 100
     PADDLE_ARENA_BUFFER = 20
     PLAYER_1_COLOR = rl.Colors.PURPLE
     PLAYER_2_COLOR = rl.Colors.BLUE
+
+    # arena
     ARENA_WIDTH = (SCREEN_WIDTH - 50)
     ARENA_HEIGHT = (SCREEN_HEIGHT - 50)
     ARENA_BORDER_THICKNESS = 10
     ARENA_BORDER_COLOR = rl.Colors.WHITE
     ARENA_BACKGROUND_COLOR = rl.Colors.BLACK
+    # the arena should start centered in the screen
+    ARENA_STARTING_POSITION =
+        rl.Vector2
+            ((SCREEN_WIDTH / 2) - (ARENA_WIDTH / 2))
+            ((SCREEN_HEIGHT / 2) - (ARENA_HEIGHT / 2))
 
-let SCREEN_CENTER =
-    rl.Vector2
-        (SCREEN_WIDTH / 2)
-        (SCREEN_HEIGHT / 2)
-
-# the arena should start centered in the screen
-let ARENA_STARTING_POSITION =
-    rl.Vector2
-        ((SCREEN_WIDTH / 2) - (ARENA_WIDTH / 2))
-        ((SCREEN_HEIGHT / 2) - (ARENA_HEIGHT / 2))
-
+    # global physics constants
+    V_ZERO = (cpVec 0.0 0.0)
+    GRAVITY = (cpVec 0.0 100.0)
+    TIME_STEP = (1.0 / 60.0)
 
 ## Structs
 
-struct Paddle
-    position : rl.Vector2
-    width : f32
-    length : f32
-    speed : f32
-
-struct Paddle_Sprite
-    rect : rl.Rectangle
-    color : rl.Color
-
-struct Ball
-    position : rl.Vector2
-    velocity : rl.Vector2
-    radius : f32
-
-struct Ball_Sprite
-    position : rl.Vector2
-    radius : f32
-    color : rl.Color
-
-struct Arena
-    position : rl.Vector2
-    width : f32
-    height : f32
-    wall-thickness : i32
-
-struct Arena_Sprite
-    rect : rl.Rectangle
-    border-thickness : f32
-    border-color : rl.Color
-    background-color : rl.Color
-
-struct Scene
-    arena : Arena
-    player1 : Paddle
-    player2 : Paddle
-    ball : Ball
-    arena-sprite : Arena_Sprite
-    player1-sprite : Paddle_Sprite
-    player2-sprite : Paddle_Sprite
-    ball-sprite : Ball_Sprite
-
-## Math
-
-# fn check-collision-circle-rect (center radius rect)
-
-#     local collision = false
-
-#     let
-#         # center of the rectangle
-#         rect-center-x = ((rect . x) + (rect.width / 2.0) as i32)
-#         rect-center-y = ((rect . y) + (rect.height / 2.0) as i32)
-#         # difference between them in each dimension
-#         dx = (abs center.x - (rect-center-x as f32))
-#         dy = (abs center.y - (rect-center-y as f32))
-
-#     # quick check for no collision
-#     if (dx > ((rect.width / 2.0) + radius))
-#         return false
-
-#     if (dy > ((rect.height / 2.0) + radius))
-#         return false
-
-#     # quick check for collision
-#     if (dx <= (rect.width / 2.0))
-#         return true
-
-#     if (dy <= (rect.height / 2.0))
-#         return true
-
-#     # if nothing else passed check the corners
-
-#     return collision
 
 ## Functions
 
