@@ -1,13 +1,12 @@
 # hello world for chipmunk but with visualizations done with raylib
 
 using import Array
-using import String
 
 let cp = (import chipmunk2d.chipmunk2d)
 let rl = (import raylib.raylib)
 using rl.macros
 
-using import .structs
+using import .game-objects
 using import .util
 
 ### Scene
@@ -76,19 +75,6 @@ local ground =
         GROUND_THICKNESS
         ground_shape
 
-fn draw-ground (ground)
-
-    let a = (cp.SegmentShapeGetA (ground . shape))
-    let b = (cp.SegmentShapeGetB (ground . shape))
-
-    # then draw the sprite
-    rl.DrawLineEx
-        (cp-to-rl-vec a)
-        (cp-to-rl-vec b)
-        ground.thickness
-        ground.color
-    ;
-
 ## ball
 local ball_radius = (cp.Float BALL_RADIUS)
 local ball_mass = (cp.Float BALL_MASS)
@@ -133,28 +119,10 @@ let pos =
     cp.BodyGetPosition
         cp.ShapeGetBody (ball . shape)
 
-fn draw-ball (ball)
-
-    let cp-pos =
-        cp.BodyGetPosition
-            cp.ShapeGetBody (ball . shape)
-
-    rl.DrawCircleV
-        cp-to-rl-vec cp-pos
-        ((cp.CircleShapeGetRadius (ball . shape)) as f32)
-        ball.color
-    ;
-
-
 local scene =
     Scene
         ground = ground
         ball = ball
-
-fn draw-scene (scene)
-    (draw-ball scene.ball)
-    (draw-ground scene.ground)
-    ;
 
 # camera
 local camera =
@@ -180,7 +148,7 @@ do-window:
         # Do 2D drawing
         rl.BeginMode2D camera
 
-        (draw-scene scene)
+        'draw scene
 
         rl.EndMode2D;
 
