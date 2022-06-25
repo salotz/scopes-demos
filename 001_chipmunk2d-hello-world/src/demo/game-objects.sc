@@ -24,6 +24,7 @@ struct Ground
             self.color
         ;
 
+inline init-ground
 
 struct Ball
     color : rl.Color
@@ -41,6 +42,49 @@ struct Ball
             self.color
         ;
 
+inline init-ball
+    config
+        space
+
+    local ball_radius = (cp.Float config.BALL_RADIUS)
+    local ball_mass = (cp.Float config.BALL_MASS)
+
+    local ball_moment =
+        cp.MomentForCircle
+            ball_mass
+            0
+            ball_radius
+            config.V_ZERO
+
+    local ball_body =
+        cp.SpaceAddBody
+            space
+            (cp.BodyNew ball_mass ball_moment)
+
+    cp.BodySetPosition
+        ball_body
+        (rl-to-cp-vec config.BALL_POSITION)
+
+    local ball_shape =
+        cp.SpaceAddShape
+            space
+            cp.CircleShapeNew
+                ball_body
+                ball_radius
+                config.V_ZERO
+
+    cp.ShapeSetElasticity
+        ball_shape
+        config.BALL_ELASTICITY
+
+    cp.ShapeSetFriction ball_shape config.BALL_FRICTION
+
+    let ball =
+        Ball
+            config.BALL_COLOR
+            ball_shape
+
+    ball
 
 
 struct Scene
@@ -51,6 +95,69 @@ struct Scene
         'draw self.ball
         'draw self.ground
 
+struct World
+    scene : Scene
+    space : (pointer cp.Space)
+
+inline init-world (config)
+
+    ## physics space
+    local space = (cp.SpaceNew)
+
+    (cp.SpaceSetGravity space config.GRAVITY)
+
+    ## ground
+    local ground_shape =
+        cp.SegmentShapeNew
+            (cp.SpaceGetStaticBody space)
+            config.GROUND_VECS @ 0
+            config.GROUND_VECS @ 1
+            0
+
+    cp.ShapeSetFriction ground_shape config.GROUND_FRICTION
+    cp.ShapeSetElasticity
+        ground_shape
+        config.GROUND_ELASTICITY
+
+    cp.SpaceAddShape space ground_shape
+
+    let ground =
+        Ground
+            config.GROUND_COLOR
+            config.GROUND_THICKNESS
+            ground_shape
+
+    ## ball
+    let ball =
+        init-ball
+            config
+            space
+
+    ## Scene
+    let scene =
+        Scene
+            ground = ground
+            ball = ball
+
+    ## World
+    let world =
+        World
+            scene
+            space
+
+    print world
+
+    world
+    # space
+
+
 do
-    let Ground Ball Scene
+    let
+        Ground
+        Ball
+        Scene
+        World
+        init-ball
+        init-ground
+        init-world
     locals;
