@@ -13,10 +13,6 @@ let CONFIG = (import .config)
 
 local world = (init-world CONFIG)
 
-# print world.space
-
-# 'physics-step world CONFIG.TIME_STEP
-
 local camera =
     rl.Camera2D
         (rlVec (CONFIG.SCREEN_WIDTH / 2.0) (CONFIG.SCREEN_HEIGHT / 2.0))
