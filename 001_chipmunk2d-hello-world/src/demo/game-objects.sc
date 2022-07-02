@@ -119,7 +119,11 @@ struct Scene
 
 struct World
     scene : Scene
-    space : (pointer cp.Space)
+    space : (mutable pointer cp.Space)
+
+    fn physics-step (self time_step)
+        (cp.SpaceStep self.space time_step)
+        ;
 
 inline init-world (config)
 
@@ -152,10 +156,7 @@ inline init-world (config)
             scene
             space
 
-    print world
-
     world
-    # space
 
 
 do
