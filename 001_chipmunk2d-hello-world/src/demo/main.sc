@@ -24,13 +24,12 @@ local camera =
 do-window:
     CONFIG.SCREEN_WIDTH
     CONFIG.SCREEN_HEIGHT
-    "Chipmunk2D: Hello World"
+    CONFIG.WINDOW_TITLE
     CONFIG.FPS
 
-    (cp.SpaceStep world.space CONFIG.TIME_STEP)
+    'physics-step world CONFIG.TIME_STEP
 
     do-draw:
-
 
         rl.ClearBackground CONFIG.BACKGROUND_COLOR
 
