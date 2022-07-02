@@ -24,7 +24,29 @@ struct Ground
             self.color
         ;
 
-inline init-ground
+inline init-ground (config space)
+
+    local ground_shape =
+        cp.SegmentShapeNew
+            (cp.SpaceGetStaticBody space)
+            config.GROUND_VECS @ 0
+            config.GROUND_VECS @ 1
+            0
+
+    cp.ShapeSetFriction ground_shape config.GROUND_FRICTION
+    cp.ShapeSetElasticity
+        ground_shape
+        config.GROUND_ELASTICITY
+
+    cp.SpaceAddShape space ground_shape
+
+    let ground =
+        Ground
+            config.GROUND_COLOR
+            config.GROUND_THICKNESS
+            ground_shape
+
+    ground
 
 struct Ball
     color : rl.Color
@@ -107,25 +129,10 @@ inline init-world (config)
     (cp.SpaceSetGravity space config.GRAVITY)
 
     ## ground
-    local ground_shape =
-        cp.SegmentShapeNew
-            (cp.SpaceGetStaticBody space)
-            config.GROUND_VECS @ 0
-            config.GROUND_VECS @ 1
-            0
-
-    cp.ShapeSetFriction ground_shape config.GROUND_FRICTION
-    cp.ShapeSetElasticity
-        ground_shape
-        config.GROUND_ELASTICITY
-
-    cp.SpaceAddShape space ground_shape
-
     let ground =
-        Ground
-            config.GROUND_COLOR
-            config.GROUND_THICKNESS
-            ground_shape
+        init-ground
+            config
+            space
 
     ## ball
     let ball =
