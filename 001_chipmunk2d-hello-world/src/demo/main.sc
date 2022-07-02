@@ -11,7 +11,7 @@ let CONFIG = (import .config)
 
 # objects
 
-local world = (init-world CONFIG)
+local world = (World CONFIG)
 
 local camera =
     rl.Camera2D

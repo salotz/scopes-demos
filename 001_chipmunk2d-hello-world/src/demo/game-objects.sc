@@ -12,6 +12,35 @@ struct Ground
     thickness : f32
     shape : (pointer cp.Shape)
 
+    inline __typecall
+        cls
+            config
+            space
+
+        # construct the shape
+        local ground_shape =
+            cp.SegmentShapeNew
+                (cp.SpaceGetStaticBody space)
+                config.GROUND_VECS @ 0
+                config.GROUND_VECS @ 1
+                0
+
+        cp.ShapeSetFriction ground_shape config.GROUND_FRICTION
+        cp.ShapeSetElasticity
+            ground_shape
+            config.GROUND_ELASTICITY
+
+        cp.SpaceAddShape space ground_shape
+
+        # then construct the actual struct
+        let self =
+            super-type.__typecall cls
+                color = config.GROUND_COLOR
+                thickness = config.GROUND_THICKNESS
+                shape = ground_shape
+
+        self
+
     fn draw (self)
         let a = (cp.SegmentShapeGetA self.shape)
         let b = (cp.SegmentShapeGetB self.shape)
@@ -23,30 +52,6 @@ struct Ground
             self.thickness
             self.color
         ;
-
-inline init-ground (config space)
-
-    local ground_shape =
-        cp.SegmentShapeNew
-            (cp.SpaceGetStaticBody space)
-            config.GROUND_VECS @ 0
-            config.GROUND_VECS @ 1
-            0
-
-    cp.ShapeSetFriction ground_shape config.GROUND_FRICTION
-    cp.ShapeSetElasticity
-        ground_shape
-        config.GROUND_ELASTICITY
-
-    cp.SpaceAddShape space ground_shape
-
-    let ground =
-        Ground
-            config.GROUND_COLOR
-            config.GROUND_THICKNESS
-            ground_shape
-
-    ground
 
 struct Ball
     color : rl.Color
@@ -64,49 +69,50 @@ struct Ball
             self.color
         ;
 
-inline init-ball
-    config
-        space
-
-    local ball_radius = (cp.Float config.BALL_RADIUS)
-    local ball_mass = (cp.Float config.BALL_MASS)
-
-    local ball_moment =
-        cp.MomentForCircle
-            ball_mass
-            0
-            ball_radius
-            config.V_ZERO
-
-    local ball_body =
-        cp.SpaceAddBody
+    inline __typecall
+        cls
+            config
             space
-            (cp.BodyNew ball_mass ball_moment)
 
-    cp.BodySetPosition
-        ball_body
-        (rl-to-cp-vec config.BALL_POSITION)
+        local ball_radius = (cp.Float config.BALL_RADIUS)
+        local ball_mass = (cp.Float config.BALL_MASS)
 
-    local ball_shape =
-        cp.SpaceAddShape
-            space
-            cp.CircleShapeNew
-                ball_body
+        local ball_moment =
+            cp.MomentForCircle
+                ball_mass
+                0
                 ball_radius
                 config.V_ZERO
 
-    cp.ShapeSetElasticity
-        ball_shape
-        config.BALL_ELASTICITY
+        local ball_body =
+            cp.SpaceAddBody
+                space
+                (cp.BodyNew ball_mass ball_moment)
 
-    cp.ShapeSetFriction ball_shape config.BALL_FRICTION
+        cp.BodySetPosition
+            ball_body
+            (rl-to-cp-vec config.BALL_POSITION)
 
-    let ball =
-        Ball
-            config.BALL_COLOR
+        local ball_shape =
+            cp.SpaceAddShape
+                space
+                cp.CircleShapeNew
+                    ball_body
+                    ball_radius
+                    config.V_ZERO
+
+        cp.ShapeSetElasticity
             ball_shape
+            config.BALL_ELASTICITY
 
-    ball
+        cp.ShapeSetFriction ball_shape config.BALL_FRICTION
+
+        let self =
+            super-type.__typecall cls
+                color = config.BALL_COLOR
+                shape = ball_shape
+
+        self
 
 
 struct Scene
@@ -121,42 +127,41 @@ struct World
     scene : Scene
     space : (mutable pointer cp.Space)
 
+    inline __typecall (cls config)
+
+        ## physics space
+        local space = (cp.SpaceNew)
+
+        (cp.SpaceSetGravity space config.GRAVITY)
+
+        ## ground
+        let ground =
+            Ground
+                config
+                space
+
+        ## ball
+        let ball =
+            Ball
+                config
+                space
+
+        ## Scene
+        let scene =
+            Scene
+                ground = ground
+                ball = ball
+
+        let self =
+            super-type.__typecall cls
+                scene = scene
+                space = space
+
+        self
+
     fn physics-step (self time_step)
         (cp.SpaceStep self.space time_step)
         ;
-
-inline init-world (config)
-
-    ## physics space
-    local space = (cp.SpaceNew)
-
-    (cp.SpaceSetGravity space config.GRAVITY)
-
-    ## ground
-    let ground =
-        init-ground
-            config
-            space
-
-    ## ball
-    let ball =
-        init-ball
-            config
-            space
-
-    ## Scene
-    let scene =
-        Scene
-            ground = ground
-            ball = ball
-
-    ## World
-    let world =
-        World
-            scene
-            space
-
-    world
 
 
 do
@@ -165,7 +170,4 @@ do
         Ball
         Scene
         World
-        init-ball
-        init-ground
-        init-world
     locals;
