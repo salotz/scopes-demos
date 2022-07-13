@@ -1,6 +1,9 @@
 run:
 	scopes -e -m demo.main
 
+test:
+	scopes -e -m demo.test
+
 repl:
 	scopes -e
 
@@ -10,4 +13,5 @@ repl:
 
 clean:
 	rm -rf .spack-env
+	rm spack.lock
 .PHONY: clean

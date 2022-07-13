@@ -6,22 +6,22 @@
   },
   "roots": [
     {
-      "hash": "oftquszvjom7kirpijb4i6ri4bzdxrs2",
-      "spec": "scopes@0.17"
+      "hash": "4axuumr5mxtq652qzhyyerqnh2jldtx3",
+      "spec": "scopes@0.18"
     },
     {
-      "hash": "t34zr37gpzx6d74gqq3o7hz3xvjs3doc",
+      "hash": "4dk6sl74ere5earpvd7r2q2yjc4h7pwa",
       "spec": "scopes-chipmunk2d"
     },
     {
-      "hash": "i2fvoqraadzzjcb5uhccrp32u7e3avth",
+      "hash": "wipmtchlnqi2t56r5jo3bkmhqe7kvt3z",
       "spec": "scopes-raylib ^font-util fonts=encodings"
     }
   ],
   "concrete_specs": {
-    "oftquszvjom7kirpijb4i6ri4bzdxrs2": {
+    "4axuumr5mxtq652qzhyyerqnh2jldtx3": {
       "name": "scopes",
-      "version": "0.17",
+      "version": "0.18",
       "arch": {
         "platform": "linux",
         "platform_os": "ubuntu20.04",
@@ -64,6 +64,7 @@
       },
       "namespace": "snailpacks",
       "parameters": {
+        "build_type": "debug",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -73,15 +74,8 @@
       },
       "dependencies": [
         {
-          "name": "genie",
-          "build_hash": "sqwnpdqnx7n5zjxu6vfdsqvdautka4ms",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "llvm",
-          "build_hash": "5ckodjso7rblje6af2z3oobbipqf7ger",
+          "build_hash": "wdgjdajidwo2z677nho63o3ypc4jwuaa",
           "type": [
             "build",
             "link"
@@ -89,7 +83,7 @@
         },
         {
           "name": "spirv-cross",
-          "build_hash": "uev2bj3kdxmh7egrrdsjdzh47pnxse55",
+          "build_hash": "rj7ofo5shizlge4ysg2yv53ivwd5uzja",
           "type": [
             "build",
             "link"
@@ -97,72 +91,18 @@
         },
         {
           "name": "spirv-tools",
-          "build_hash": "2grpxawbqstdhv336k5upnjo4jxsoo47",
+          "build_hash": "jmvfxtr3fhjcaegsclkjhyrvlvfx6etj",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "syxf7b7jumolxsnb6rlvatnl7gfufpgh"
+      "hash": "6xjweo3mmzifgejctfhdqjh4pim24f4x"
     },
-    "sqwnpdqnx7n5zjxu6vfdsqvdautka4ms": {
-      "name": "genie",
-      "version": "1160",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "snailpacks",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "hash": "sqwnpdqnx7n5zjxu6vfdsqvdautka4ms"
-    },
-    "5ckodjso7rblje6af2z3oobbipqf7ger": {
+    "wdgjdajidwo2z677nho63o3ypc4jwuaa": {
       "name": "llvm",
-      "version": "12.0.1",
+      "version": "13.0.1",
       "arch": {
         "platform": "linux",
         "platform_os": "ubuntu20.04",
@@ -240,13 +180,13 @@
         "ldlibs": []
       },
       "external": {
-        "path": "/opt/llvm/clang+llvm-12.0.1-x86_64-linux-gnu-ubuntu-",
+        "path": "/home/salotz/programs/llvm/clang+llvm-13.0.1-x86_64-linux-gnu-ubuntu-18.04",
         "module": null,
         "extra_attributes": {}
       },
-      "hash": "5ckodjso7rblje6af2z3oobbipqf7ger"
+      "hash": "wdgjdajidwo2z677nho63o3ypc4jwuaa"
     },
-    "uev2bj3kdxmh7egrrdsjdzh47pnxse55": {
+    "rj7ofo5shizlge4ysg2yv53ivwd5uzja": {
       "name": "spirv-cross",
       "version": "1.3.204.1",
       "arch": {
@@ -300,822 +240,9 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "dependencies": [
-        {
-          "name": "cmake",
-          "build_hash": "m6a4mwcwksws42gho3apcknzrhvoi3az",
-          "type": [
-            "build"
-          ]
-        }
-      ],
       "hash": "rj7ofo5shizlge4ysg2yv53ivwd5uzja"
     },
-    "m6a4mwcwksws42gho3apcknzrhvoi3az": {
-      "name": "cmake",
-      "version": "3.23.0",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "build_type": "Release",
-        "doc": false,
-        "ncurses": true,
-        "ownlibs": true,
-        "qt": false,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "ncurses",
-          "build_hash": "2lphm4mbq4uynycwkbvzdxzwbejfjrpj",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "openssl",
-          "build_hash": "br6umgobkcgz5ay4ug4os3oc7m25psbz",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "n23uidnzg7ll3vhmuokz45fjwwtzxojv"
-    },
-    "2lphm4mbq4uynycwkbvzdxzwbejfjrpj": {
-      "name": "ncurses",
-      "version": "6.2",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "abi": "none",
-        "symlinks": false,
-        "termlib": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "5bzr63iqgpogufanleaw2fzjxnzziz67"
-    },
-    "5bckkoeicca3dtolbeyz6tnnyxwcsfn5": {
-      "name": "pkgconf",
-      "version": "1.8.0",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5"
-    },
-    "br6umgobkcgz5ay4ug4os3oc7m25psbz": {
-      "name": "openssl",
-      "version": "1.1.1n",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "certs": "system",
-        "docs": false,
-        "shared": false,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "perl",
-          "build_hash": "36p7mv74hm44ual2773rjqhqstxamo4h",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "zlib",
-          "build_hash": "y3k56s5znlxpc4kyldndkvo24tg6uhcr",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "3wykuhhs7tmamr6bpssczpvvwstm25h7"
-    },
-    "36p7mv74hm44ual2773rjqhqstxamo4h": {
-      "name": "perl",
-      "version": "5.34.1",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cpanm": true,
-        "shared": true,
-        "threads": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "berkeley-db",
-          "build_hash": "pdlzkb4o4qsw3nglppv7eqjm7lepqvod",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "bzip2",
-          "build_hash": "sgzboek7irz5ksv2xxleawhpll7lqp6g",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "gdbm",
-          "build_hash": "l5opbe6cvv7ajns6yz37svmgo2m4sghc",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "zlib",
-          "build_hash": "y3k56s5znlxpc4kyldndkvo24tg6uhcr",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "doqfwcvc2jl6pecsib6sza3qhytsll5y"
-    },
-    "pdlzkb4o4qsw3nglppv7eqjm7lepqvod": {
-      "name": "berkeley-db",
-      "version": "18.1.40",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cxx": true,
-        "docs": false,
-        "patches": [
-          "b231fcc4d5cff05e5c3a4814f6a5af0e9a966428dc2176540d2c05aff41de522"
-        ],
-        "stl": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "patches": [
-        "b231fcc4d5cff05e5c3a4814f6a5af0e9a966428dc2176540d2c05aff41de522"
-      ],
-      "hash": "pdlzkb4o4qsw3nglppv7eqjm7lepqvod"
-    },
-    "sgzboek7irz5ksv2xxleawhpll7lqp6g": {
-      "name": "bzip2",
-      "version": "1.0.8",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "debug": false,
-        "pic": false,
-        "shared": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "diffutils",
-          "build_hash": "vhwuajizcnpfo2jkjqbo76z4dxjbiyzi",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "doeyikigv6jk4dk6fdxm3cl5j7j465if"
-    },
-    "vhwuajizcnpfo2jkjqbo76z4dxjbiyzi": {
-      "name": "diffutils",
-      "version": "3.8",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "libiconv",
-          "build_hash": "infpf4xwcb7253odbry6ljjcsat2ksp5",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "ae4ve7adrxntd2kafm4xxmeyhrwpzpmg"
-    },
-    "infpf4xwcb7253odbry6ljjcsat2ksp5": {
-      "name": "libiconv",
-      "version": "1.16",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "libs": [
-          "shared",
-          "static"
-        ],
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "hash": "infpf4xwcb7253odbry6ljjcsat2ksp5"
-    },
-    "l5opbe6cvv7ajns6yz37svmgo2m4sghc": {
-      "name": "gdbm",
-      "version": "1.19",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "readline",
-          "build_hash": "y2qtng7fushalglpskcsqjmg6v2ocaww",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "wuhyaf477mw6nmgftp3gvrxic7qzgpso"
-    },
-    "y2qtng7fushalglpskcsqjmg6v2ocaww": {
-      "name": "readline",
-      "version": "8.1",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "ncurses",
-          "build_hash": "2lphm4mbq4uynycwkbvzdxzwbejfjrpj",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "wkga37hicua476jm2bjjmuzufz6h574j"
-    },
-    "y3k56s5znlxpc4kyldndkvo24tg6uhcr": {
-      "name": "zlib",
-      "version": "1.2.12",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "optimize": true,
-        "patches": [
-          "0d38234384870bfd34dfcb738a9083952656f0c766a0f5990b1893076b084b76"
-        ],
-        "pic": true,
-        "shared": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "patches": [
-        "0d38234384870bfd34dfcb738a9083952656f0c766a0f5990b1893076b084b76"
-      ],
-      "hash": "y3k56s5znlxpc4kyldndkvo24tg6uhcr"
-    },
-    "2grpxawbqstdhv336k5upnjo4jxsoo47": {
+    "jmvfxtr3fhjcaegsclkjhyrvlvfx6etj": {
       "name": "spirv-tools",
       "version": "2022.1",
       "arch": {
@@ -1171,15 +298,8 @@
       },
       "dependencies": [
         {
-          "name": "cmake",
-          "build_hash": "m6a4mwcwksws42gho3apcknzrhvoi3az",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "spirv-headers",
-          "build_hash": "5tu5hvpqbh7djnzoshghzl72lt6ntuzt",
+          "build_hash": "dfojf53a7plbfv5opml7m7dq6o4lzf7d",
           "type": [
             "build",
             "link"
@@ -1188,7 +308,7 @@
       ],
       "hash": "ykcd5klerzeecdjwqqt2rey3twrogsvj"
     },
-    "5tu5hvpqbh7djnzoshghzl72lt6ntuzt": {
+    "dfojf53a7plbfv5opml7m7dq6o4lzf7d": {
       "name": "spirv-headers",
       "version": "1.3.204.1",
       "arch": {
@@ -1242,18 +362,9 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "dependencies": [
-        {
-          "name": "cmake",
-          "build_hash": "m6a4mwcwksws42gho3apcknzrhvoi3az",
-          "type": [
-            "build"
-          ]
-        }
-      ],
       "hash": "dfojf53a7plbfv5opml7m7dq6o4lzf7d"
     },
-    "t34zr37gpzx6d74gqq3o7hz3xvjs3doc": {
+    "4dk6sl74ere5earpvd7r2q2yjc4h7pwa": {
       "name": "scopes-chipmunk2d",
       "version": "0.2",
       "arch": {
@@ -1308,7 +419,7 @@
       "dependencies": [
         {
           "name": "chipmunk2d",
-          "build_hash": "d3frc6c54fln52oxwtvzlnyzjtfflsdg",
+          "build_hash": "vydfbeevwkpdtec6zyajigqgi3bg5jal",
           "type": [
             "build",
             "link"
@@ -1316,16 +427,16 @@
         },
         {
           "name": "scopes",
-          "build_hash": "oftquszvjom7kirpijb4i6ri4bzdxrs2",
+          "build_hash": "4axuumr5mxtq652qzhyyerqnh2jldtx3",
           "type": [
             "build",
             "run"
           ]
         }
       ],
-      "hash": "dguxblec6bojr64scaz32hnbllaekdls"
+      "hash": "hb4v6tujqor5ghct76adimqojiflisup"
     },
-    "d3frc6c54fln52oxwtvzlnyzjtfflsdg": {
+    "vydfbeevwkpdtec6zyajigqgi3bg5jal": {
       "name": "chipmunk2d",
       "version": "7.0.3",
       "arch": {
@@ -1379,18 +490,9 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "dependencies": [
-        {
-          "name": "cmake",
-          "build_hash": "m6a4mwcwksws42gho3apcknzrhvoi3az",
-          "type": [
-            "build"
-          ]
-        }
-      ],
       "hash": "vydfbeevwkpdtec6zyajigqgi3bg5jal"
     },
-    "i2fvoqraadzzjcb5uhccrp32u7e3avth": {
+    "wipmtchlnqi2t56r5jo3bkmhqe7kvt3z": {
       "name": "scopes-raylib",
       "version": "0.4",
       "arch": {
@@ -1445,7 +547,7 @@
       "dependencies": [
         {
           "name": "raylib",
-          "build_hash": "kyp3esboqtugurqqs2fv2ybzdgzhzwul",
+          "build_hash": "3lh3itbhhfru2zxaadxepdmeb3q43fij",
           "type": [
             "build",
             "link"
@@ -1453,16 +555,16 @@
         },
         {
           "name": "scopes",
-          "build_hash": "oftquszvjom7kirpijb4i6ri4bzdxrs2",
+          "build_hash": "4axuumr5mxtq652qzhyyerqnh2jldtx3",
           "type": [
             "build",
             "run"
           ]
         }
       ],
-      "hash": "6x4lgfmdfbd6o7s3x4l55dz5azexlu6i"
+      "hash": "w67mgmkbshsj464jm637i2s3qqcorera"
     },
-    "kyp3esboqtugurqqs2fv2ybzdgzhzwul": {
+    "3lh3itbhhfru2zxaadxepdmeb3q43fij": {
       "name": "raylib",
       "version": "4.0.0",
       "arch": {
@@ -1530,15 +632,8 @@
           ]
         },
         {
-          "name": "cmake",
-          "build_hash": "m6a4mwcwksws42gho3apcknzrhvoi3az",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "font-util",
-          "build_hash": "jf2354t6zlqi2cuyoegvi66lijhyzn4e",
+          "build_hash": "lcwcqraiuv63lkjzfxlyyvfuyopqhsfz",
           "type": [
             "build",
             "link"
@@ -1546,7 +641,7 @@
         },
         {
           "name": "glfw",
-          "build_hash": "yflkklw4xnkxocx4z7ugpj353dbxmxo2",
+          "build_hash": "yipkgxgrkchdqmlcdeek5pf6ffvsck5i",
           "type": [
             "build",
             "link"
@@ -1554,7 +649,7 @@
         },
         {
           "name": "libx11",
-          "build_hash": "shypd2tz7x4tdwd2kpadwhspvhwxgohv",
+          "build_hash": "p7edhqlrh55noi25f6ovyk5nezl33zac",
           "type": [
             "build",
             "link"
@@ -1562,7 +657,7 @@
         },
         {
           "name": "libxi",
-          "build_hash": "wcjurw2jrhmz7hudpsqnj44ymiaaqu74",
+          "build_hash": "vby2msrim5vkzq7qcbh6fymh6v2urch7",
           "type": [
             "build",
             "link"
@@ -1570,7 +665,7 @@
         },
         {
           "name": "libxrandr",
-          "build_hash": "2aka2rwug4bfv4vr7iuekigqlyuky6o2",
+          "build_hash": "5yglhclftyl476nfhyfudyrbnpqr2tlw",
           "type": [
             "build",
             "link"
@@ -1578,7 +673,7 @@
         },
         {
           "name": "mesa",
-          "build_hash": "g6pd7ruwbh3q2kunhkpqmmljgmr2zazp",
+          "build_hash": "qtsvfhly53va6jpw7uxos4xwluawfv6o",
           "type": [
             "build",
             "link"
@@ -1586,7 +681,7 @@
         },
         {
           "name": "mesa-glu",
-          "build_hash": "n7n76ainbmus54ygtz6dovnf53x44jt4",
+          "build_hash": "vhx26p3k4pexoopmaclu7pgufofe7zow",
           "type": [
             "build",
             "link"
@@ -1650,7 +745,7 @@
       },
       "hash": "3iw37qe7d6vi7kxy5x4bnrslj43rgo2a"
     },
-    "jf2354t6zlqi2cuyoegvi66lijhyzn4e": {
+    "lcwcqraiuv63lkjzfxlyyvfuyopqhsfz": {
       "name": "font-util",
       "version": "1.3.2",
       "arch": {
@@ -1706,62 +801,11 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "dependencies": [
-        {
-          "name": "autoconf",
-          "build_hash": "n6mynqljvaex4yc2npalbxlk42l4lbck",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "automake",
-          "build_hash": "nhq62plikizcfowacbaskwockxuuh3lg",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "bdftopcf",
-          "build_hash": "n4qooaxt53ntxdp3zncpc4ehvenpqdno",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "mkfontdir",
-          "build_hash": "cviuwtgc3vxgdwdkibnkrdfrdcw3zhcy",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "mkfontscale",
-          "build_hash": "3aleoxpz4iqld7mmr6eqpukmff3tqoqb",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        }
-      ],
       "hash": "lcwcqraiuv63lkjzfxlyyvfuyopqhsfz"
     },
-    "n6mynqljvaex4yc2npalbxlk42l4lbck": {
-      "name": "autoconf",
-      "version": "2.69",
+    "yipkgxgrkchdqmlcdeek5pf6ffvsck5i": {
+      "name": "glfw",
+      "version": "3.3.6",
       "arch": {
         "platform": "linux",
         "platform_os": "ubuntu20.04",
@@ -1802,217 +846,13 @@
         "name": "gcc",
         "version": "9.3.0"
       },
-      "namespace": "builtin",
+      "namespace": "snailpacks",
       "parameters": {
-        "patches": [
-          "35c449281546376449766f92d49fc121ca50e330e60fefcfc9be2af3253082c2",
-          "7793209b33013dc0f81208718c68440c5aae80e7a1c4b8d336e382525af791a7",
-          "a49dd5bac3b62daa0ff688ab4d508d71dbd2f4f8d7e2a02321926346161bf3ee"
-        ],
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "patches": [
-        "7793209b33013dc0f81208718c68440c5aae80e7a1c4b8d336e382525af791a7",
-        "35c449281546376449766f92d49fc121ca50e330e60fefcfc9be2af3253082c2",
-        "a49dd5bac3b62daa0ff688ab4d508d71dbd2f4f8d7e2a02321926346161bf3ee"
-      ],
-      "dependencies": [
-        {
-          "name": "m4",
-          "build_hash": "p5lhjnzfkkvgkrjiipqjp7vqjkatq7uy",
-          "type": [
-            "build",
-            "run"
-          ]
-        },
-        {
-          "name": "perl",
-          "build_hash": "36p7mv74hm44ual2773rjqhqstxamo4h",
-          "type": [
-            "build",
-            "run"
-          ]
-        }
-      ],
-      "hash": "uahfpxrcgrrtwpasqxyu7tf55tot6kyh"
-    },
-    "p5lhjnzfkkvgkrjiipqjp7vqjkatq7uy": {
-      "name": "m4",
-      "version": "1.4.19",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "patches": [
-          "9dc5fbd0d5cb1037ab1e6d0ecc74a30df218d0a94bdd5a02759a97f62daca573",
-          "bfdffa7c2eb01021d5849b36972c069693654ad826c1a20b53534009a4ec7a89"
-        ],
-        "sigsegv": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "patches": [
-        "bfdffa7c2eb01021d5849b36972c069693654ad826c1a20b53534009a4ec7a89",
-        "9dc5fbd0d5cb1037ab1e6d0ecc74a30df218d0a94bdd5a02759a97f62daca573"
-      ],
-      "dependencies": [
-        {
-          "name": "libsigsegv",
-          "build_hash": "nhg7qep6byb3fttv655s6frahi3zcnxw",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "d4vlqx75hylz6fp4bavvuanyoblcm6jm"
-    },
-    "nhg7qep6byb3fttv655s6frahi3zcnxw": {
-      "name": "libsigsegv",
-      "version": "2.13",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "hash": "nhg7qep6byb3fttv655s6frahi3zcnxw"
-    },
-    "nhq62plikizcfowacbaskwockxuuh3lg": {
-      "name": "automake",
-      "version": "1.16.5",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
+        "build_type": "RelWithDebInfo",
+        "doc": false,
+        "ipo": false,
+        "shared": true,
+        "vulkan_static": false,
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -2022,297 +862,8 @@
       },
       "dependencies": [
         {
-          "name": "autoconf",
-          "build_hash": "n6mynqljvaex4yc2npalbxlk42l4lbck",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "perl",
-          "build_hash": "36p7mv74hm44ual2773rjqhqstxamo4h",
-          "type": [
-            "build",
-            "run"
-          ]
-        }
-      ],
-      "hash": "3vooxh66t7fndyfd4uec4ukt2cif4ics"
-    },
-    "n4qooaxt53ntxdp3zncpc4ehvenpqdno": {
-      "name": "bdftopcf",
-      "version": "1.0.5",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "fontsproto",
-          "build_hash": "tz74kpq65by46mtpqza4s6c6efjtanck",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libxfont",
-          "build_hash": "gj3k7g7fgh4pqbzo4zpntrf5abtacsmi",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "xproto",
-          "build_hash": "rmt44cy72ph6sicbo32dxnofav7pztjr",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "wa7ih2wx6wnhwdetew6fx5px26cdzveo"
-    },
-    "tz74kpq65by46mtpqza4s6c6efjtanck": {
-      "name": "fontsproto",
-      "version": "2.1.3",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "x5pdlfvitcpo3xlgu7xsom2pflyl3n3u"
-    },
-    "zjpklocahhfunvir4op6ctfdisr2t7ry": {
-      "name": "util-macros",
-      "version": "1.19.3",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "hash": "zjpklocahhfunvir4op6ctfdisr2t7ry"
-    },
-    "gj3k7g7fgh4pqbzo4zpntrf5abtacsmi": {
-      "name": "libxfont",
-      "version": "1.5.2",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "fontsproto",
-          "build_hash": "tz74kpq65by46mtpqza4s6c6efjtanck",
+          "name": "fontconfig",
+          "build_hash": "s4q6bkof3y7g67ufqnmms3w6zegdhd3z",
           "type": [
             "build",
             "link"
@@ -2320,54 +871,160 @@
         },
         {
           "name": "freetype",
-          "build_hash": "izxccilmcmnwzvbkkltnf5hpzh6p2swp",
+          "build_hash": "kdzo25ymfyi2vlqhwewq6u5rzavokewv",
           "type": [
             "build",
             "link"
           ]
         },
         {
-          "name": "libfontenc",
-          "build_hash": "z76uv75pnwamegfjxatpmy2exugavez7",
+          "name": "libxcursor",
+          "build_hash": "kbzcx6zcudf2rc7tenvhf6ta4rnm2d2u",
           "type": [
             "build",
             "link"
           ]
         },
         {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "xproto",
-          "build_hash": "rmt44cy72ph6sicbo32dxnofav7pztjr",
+          "name": "libxdamage",
+          "build_hash": "ykazj4l56zsg4dufj6uahovlvx5kzk6k",
           "type": [
             "build",
             "link"
           ]
         },
         {
-          "name": "xtrans",
-          "build_hash": "a53kfwtb4xwhvkhkthcqssq7dcrrvyvc",
+          "name": "libxft",
+          "build_hash": "5l5s2shcveuvbc47qbl6a5sharsfo5by",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxi",
+          "build_hash": "vby2msrim5vkzq7qcbh6fymh6v2urch7",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxinerama",
+          "build_hash": "m2zu7epeh3irkmorjaycc66jvmz6tbfn",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxmu",
+          "build_hash": "i3tdnxkq4zlhuhbojihv47pho3hpoxqh",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxrandr",
+          "build_hash": "5yglhclftyl476nfhyfudyrbnpqr2tlw",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "kfvsd7jr5tyysbqwiz7d4rqcue2uiscn"
+      "hash": "aoiwisaj2hehwmscrxzopslh6kwyqge6"
     },
-    "izxccilmcmnwzvbkkltnf5hpzh6p2swp": {
+    "s4q6bkof3y7g67ufqnmms3w6zegdhd3z": {
+      "name": "fontconfig",
+      "version": "2.13.94",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "ubuntu20.04",
+        "target": {
+          "name": "skylake",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "broadwell"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "9.3.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "dependencies": [
+        {
+          "name": "font-util",
+          "build_hash": "lcwcqraiuv63lkjzfxlyyvfuyopqhsfz",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "freetype",
+          "build_hash": "kdzo25ymfyi2vlqhwewq6u5rzavokewv",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxml2",
+          "build_hash": "xtzcvgjsunquodg344p6rxfqfx2rris2",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "util-linux-uuid",
+          "build_hash": "xwyinbqvrbglmaj5bp3ibtxn2drxy7g7",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "dgswxj5a6l4sdpmqure622t4vemwfdcm"
+    },
+    "kdzo25ymfyi2vlqhwewq6u5rzavokewv": {
       "name": "freetype",
       "version": "2.11.1",
       "arch": {
@@ -2422,7 +1079,7 @@
       "dependencies": [
         {
           "name": "bzip2",
-          "build_hash": "sgzboek7irz5ksv2xxleawhpll7lqp6g",
+          "build_hash": "doeyikigv6jk4dk6fdxm3cl5j7j465if",
           "type": [
             "build",
             "link"
@@ -2435,16 +1092,66 @@
             "build",
             "link"
           ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
         }
       ],
       "hash": "6ieywbbfez7defsirg7zqybr5efae2yt"
+    },
+    "doeyikigv6jk4dk6fdxm3cl5j7j465if": {
+      "name": "bzip2",
+      "version": "1.0.8",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "ubuntu20.04",
+        "target": {
+          "name": "skylake",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "broadwell"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "9.3.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "debug": false,
+        "pic": false,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "hash": "doeyikigv6jk4dk6fdxm3cl5j7j465if"
     },
     "j3cphwublilo4g3s3f6gaoqrlbtf34di": {
       "name": "libpng",
@@ -2510,9 +1217,9 @@
       ],
       "hash": "yzxq6s6xbvexdmbq5nboykfxreo67htf"
     },
-    "z76uv75pnwamegfjxatpmy2exugavez7": {
-      "name": "libfontenc",
-      "version": "1.1.3",
+    "y3k56s5znlxpc4kyldndkvo24tg6uhcr": {
+      "name": "zlib",
+      "version": "1.2.12",
       "arch": {
         "platform": "linux",
         "platform_os": "ubuntu20.04",
@@ -2555,408 +1262,12 @@
       },
       "namespace": "builtin",
       "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "xproto",
-          "build_hash": "rmt44cy72ph6sicbo32dxnofav7pztjr",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "zlib",
-          "build_hash": "y3k56s5znlxpc4kyldndkvo24tg6uhcr",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "shzq3ygry2uqkrjfd7vzt42fy6ycacqr"
-    },
-    "rmt44cy72ph6sicbo32dxnofav7pztjr": {
-      "name": "xproto",
-      "version": "7.0.31",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "hwgfxv5zq5p5nzoizfzjxgbjame3ohc4"
-    },
-    "a53kfwtb4xwhvkhkthcqssq7dcrrvyvc": {
-      "name": "xtrans",
-      "version": "1.3.5",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "ndjwuhlay5hpxmpngcpztwggqzwx4ii5"
-    },
-    "cviuwtgc3vxgdwdkibnkrdfrdcw3zhcy": {
-      "name": "mkfontdir",
-      "version": "1.0.7",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "mkfontscale",
-          "build_hash": "3aleoxpz4iqld7mmr6eqpukmff3tqoqb",
-          "type": [
-            "run"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "4w62la7l7hhezhkkrjxoa7qgjgmqkzk6"
-    },
-    "3aleoxpz4iqld7mmr6eqpukmff3tqoqb": {
-      "name": "mkfontscale",
-      "version": "1.1.2",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "freetype",
-          "build_hash": "izxccilmcmnwzvbkkltnf5hpzh6p2swp",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libfontenc",
-          "build_hash": "z76uv75pnwamegfjxatpmy2exugavez7",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "xproto",
-          "build_hash": "rmt44cy72ph6sicbo32dxnofav7pztjr",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "nx7c7bav4o76gm2seu4zayd345qaqesp"
-    },
-    "yflkklw4xnkxocx4z7ugpj353dbxmxo2": {
-      "name": "glfw",
-      "version": "3.3.6",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "snailpacks",
-      "parameters": {
-        "build_type": "RelWithDebInfo",
-        "doc": false,
-        "ipo": false,
+        "optimize": true,
+        "patches": [
+          "0d38234384870bfd34dfcb738a9083952656f0c766a0f5990b1893076b084b76"
+        ],
+        "pic": true,
         "shared": true,
-        "vulkan_static": false,
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -2964,260 +1275,12 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "dependencies": [
-        {
-          "name": "cmake",
-          "build_hash": "m6a4mwcwksws42gho3apcknzrhvoi3az",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "fontconfig",
-          "build_hash": "dlejkkwpp3gqmoddkesgbkxawekr3gx2",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "freetype",
-          "build_hash": "izxccilmcmnwzvbkkltnf5hpzh6p2swp",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libxcursor",
-          "build_hash": "44p63vchyzpospvwdcbvkcwo4wavpgye",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libxdamage",
-          "build_hash": "6bpajfovb6upqvir7u6kjn3ndtql7sqg",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libxft",
-          "build_hash": "kt6nay6y7w2rmeezmkg7tvnob3buqkho",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libxi",
-          "build_hash": "wcjurw2jrhmz7hudpsqnj44ymiaaqu74",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libxinerama",
-          "build_hash": "nomhtywmr2xovzbsbf33ekwloscaykmw",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libxmu",
-          "build_hash": "4mr4yzbw4cfchdjzdj2y4ugwfm73acjt",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libxrandr",
-          "build_hash": "2aka2rwug4bfv4vr7iuekigqlyuky6o2",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        }
+      "patches": [
+        "0d38234384870bfd34dfcb738a9083952656f0c766a0f5990b1893076b084b76"
       ],
-      "hash": "aoiwisaj2hehwmscrxzopslh6kwyqge6"
+      "hash": "y3k56s5znlxpc4kyldndkvo24tg6uhcr"
     },
-    "dlejkkwpp3gqmoddkesgbkxawekr3gx2": {
-      "name": "fontconfig",
-      "version": "2.13.94",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "font-util",
-          "build_hash": "jf2354t6zlqi2cuyoegvi66lijhyzn4e",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "freetype",
-          "build_hash": "izxccilmcmnwzvbkkltnf5hpzh6p2swp",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "gperf",
-          "build_hash": "53vgbf47kndkfsxshrebpppr6jurdusj",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "libxml2",
-          "build_hash": "msin5zipxyguohys36aefx7n45gpmxt4",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "python",
-          "build_hash": "5u3l3fpjyw37iryspwfe7vxaigkxkkbd",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-linux-uuid",
-          "build_hash": "r7bt6ur2oefkgd3bjkzwgunxf2zkvc4m",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "dgswxj5a6l4sdpmqure622t4vemwfdcm"
-    },
-    "53vgbf47kndkfsxshrebpppr6jurdusj": {
-      "name": "gperf",
-      "version": "3.1",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "hash": "53vgbf47kndkfsxshrebpppr6jurdusj"
-    },
-    "msin5zipxyguohys36aefx7n45gpmxt4": {
+    "xtzcvgjsunquodg344p6rxfqfx2rris2": {
       "name": "libxml2",
       "version": "2.9.12",
       "arch": {
@@ -3280,13 +1343,6 @@
           ]
         },
         {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "xz",
           "build_hash": "rysepqc4kpacrxufhrb7tm2dk6sups6v",
           "type": [
@@ -3304,6 +1360,64 @@
         }
       ],
       "hash": "5t6mj2ejh634jwahhrqchos4qpdkgxe7"
+    },
+    "infpf4xwcb7253odbry6ljjcsat2ksp5": {
+      "name": "libiconv",
+      "version": "1.16",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "ubuntu20.04",
+        "target": {
+          "name": "skylake",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "broadwell"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "9.3.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "libs": [
+          "shared",
+          "static"
+        ],
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "hash": "infpf4xwcb7253odbry6ljjcsat2ksp5"
     },
     "rysepqc4kpacrxufhrb7tm2dk6sups6v": {
       "name": "xz",
@@ -3364,9 +1478,9 @@
       },
       "hash": "rysepqc4kpacrxufhrb7tm2dk6sups6v"
     },
-    "5u3l3fpjyw37iryspwfe7vxaigkxkkbd": {
-      "name": "python",
-      "version": "3.9.12",
+    "xwyinbqvrbglmaj5bp3ibtxn2drxy7g7": {
+      "name": "util-linux-uuid",
+      "version": "2.37.4",
       "arch": {
         "platform": "linux",
         "platform_os": "ubuntu20.04",
@@ -3409,32 +1523,6 @@
       },
       "namespace": "builtin",
       "parameters": {
-        "bz2": true,
-        "ctypes": true,
-        "dbm": true,
-        "debug": false,
-        "ensurepip": true,
-        "libxml2": true,
-        "lzma": true,
-        "nis": false,
-        "optimizations": false,
-        "patches": [
-          "0d98e93189bc278fbc37a50ed7f183bd8aaf249a8e1670a465f0db6bb4f8cf87",
-          "4c2457325f2b608b1b6a2c63087df8c26e07db3e3d493caf36a56f0ecf6fb768",
-          "f2fd060afc4b4618fe8104c4c5d771f36dc55b1db5a4623785a4ea707ec72fb4"
-        ],
-        "pic": true,
-        "pyexpat": true,
-        "pythoncmd": true,
-        "readline": true,
-        "shared": true,
-        "sqlite3": true,
-        "ssl": true,
-        "tix": false,
-        "tkinter": false,
-        "ucs4": false,
-        "uuid": true,
-        "zlib": true,
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3442,121 +1530,11 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "patches": [
-        "0d98e93189bc278fbc37a50ed7f183bd8aaf249a8e1670a465f0db6bb4f8cf87",
-        "f2fd060afc4b4618fe8104c4c5d771f36dc55b1db5a4623785a4ea707ec72fb4",
-        "4c2457325f2b608b1b6a2c63087df8c26e07db3e3d493caf36a56f0ecf6fb768"
-      ],
-      "dependencies": [
-        {
-          "name": "bzip2",
-          "build_hash": "sgzboek7irz5ksv2xxleawhpll7lqp6g",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "expat",
-          "build_hash": "xnv3vx2zxtqrlp3dsz2wpyhuzhdtukll",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "gdbm",
-          "build_hash": "l5opbe6cvv7ajns6yz37svmgo2m4sghc",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "gettext",
-          "build_hash": "ph6q55yiefg6kisz2vc2mlqpr4crppiq",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libffi",
-          "build_hash": "3zeczcdd36373oztmu2tiaexoxg34ayi",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "ncurses",
-          "build_hash": "2lphm4mbq4uynycwkbvzdxzwbejfjrpj",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "openssl",
-          "build_hash": "br6umgobkcgz5ay4ug4os3oc7m25psbz",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "readline",
-          "build_hash": "y2qtng7fushalglpskcsqjmg6v2ocaww",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "sqlite",
-          "build_hash": "vchkxcvoixs53wfjqfzfj34ech7gjiie",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "util-linux-uuid",
-          "build_hash": "r7bt6ur2oefkgd3bjkzwgunxf2zkvc4m",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "xz",
-          "build_hash": "rysepqc4kpacrxufhrb7tm2dk6sups6v",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "zlib",
-          "build_hash": "y3k56s5znlxpc4kyldndkvo24tg6uhcr",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "fhrwwzakzugvjqgzfbrmtjkwca6rhjte"
+      "hash": "xwyinbqvrbglmaj5bp3ibtxn2drxy7g7"
     },
-    "xnv3vx2zxtqrlp3dsz2wpyhuzhdtukll": {
-      "name": "expat",
-      "version": "2.4.8",
+    "kbzcx6zcudf2rc7tenvhf6ta4rnm2d2u": {
+      "name": "libxcursor",
+      "version": "1.1.14",
       "arch": {
         "platform": "linux",
         "platform_os": "ubuntu20.04",
@@ -3599,7 +1577,620 @@
       },
       "namespace": "builtin",
       "parameters": {
-        "libbsd": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "dependencies": [
+        {
+          "name": "fixesproto",
+          "build_hash": "j77nn5uzqq3dpz2swjmxypg4d3ivm5tb",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libx11",
+          "build_hash": "p7edhqlrh55noi25f6ovyk5nezl33zac",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxfixes",
+          "build_hash": "47h5j5dk5n5dlp6qy2ihc2ag2ydhckup",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxrender",
+          "build_hash": "khm2kw6hzdd565uxz6mn2xcwzggmxsp7",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "fkytvrrl2awbqex3mkfufv7mxx54465q"
+    },
+    "j77nn5uzqq3dpz2swjmxypg4d3ivm5tb": {
+      "name": "fixesproto",
+      "version": "5.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "ubuntu20.04",
+        "target": {
+          "name": "skylake",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "broadwell"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "9.3.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "hash": "j77nn5uzqq3dpz2swjmxypg4d3ivm5tb"
+    },
+    "p7edhqlrh55noi25f6ovyk5nezl33zac": {
+      "name": "libx11",
+      "version": "1.7.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "ubuntu20.04",
+        "target": {
+          "name": "skylake",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "broadwell"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "9.3.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "dependencies": [
+        {
+          "name": "inputproto",
+          "build_hash": "q32kfh6gbjqjnzmfi22ae7ghixy7adrx",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "kbproto",
+          "build_hash": "z25htfaqauifgxj5qmoqisq3fohtltib",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxcb",
+          "build_hash": "m4ab75dfixyrnysiven777dyclzu52j7",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "xextproto",
+          "build_hash": "4utkymwdv4nzbpe3l4y4yhzwqmq4piil",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "xproto",
+          "build_hash": "hwgfxv5zq5p5nzoizfzjxgbjame3ohc4",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "xtrans",
+          "build_hash": "ndjwuhlay5hpxmpngcpztwggqzwx4ii5",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "3rrus7p5hzqda3iiu7nhpdhb3q7juw3a"
+    },
+    "q32kfh6gbjqjnzmfi22ae7ghixy7adrx": {
+      "name": "inputproto",
+      "version": "2.3.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "ubuntu20.04",
+        "target": {
+          "name": "skylake",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "broadwell"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "9.3.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "hash": "q32kfh6gbjqjnzmfi22ae7ghixy7adrx"
+    },
+    "z25htfaqauifgxj5qmoqisq3fohtltib": {
+      "name": "kbproto",
+      "version": "1.0.7",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "ubuntu20.04",
+        "target": {
+          "name": "skylake",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "broadwell"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "9.3.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "hash": "z25htfaqauifgxj5qmoqisq3fohtltib"
+    },
+    "m4ab75dfixyrnysiven777dyclzu52j7": {
+      "name": "libxcb",
+      "version": "1.14",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "ubuntu20.04",
+        "target": {
+          "name": "skylake",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "broadwell"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "9.3.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "dependencies": [
+        {
+          "name": "libpthread-stubs",
+          "build_hash": "ptv2wpnans7e2gdbcg7lryxvwfsncoeq",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxau",
+          "build_hash": "6iatlmlaznbw2a3ulj5b2aq5p6qpkx2z",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "libxdmcp",
+          "build_hash": "akqjzofmocqtxv2h3st5le6ylggpe7un",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "xcb-proto",
+          "build_hash": "vsj4ritcqwpcmadbhjvwfvmfmrkvaem6",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "e5lj34bysnzmrg2r3to54jgj44r2kkr3"
+    },
+    "ptv2wpnans7e2gdbcg7lryxvwfsncoeq": {
+      "name": "libpthread-stubs",
+      "version": "0.4",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "ubuntu20.04",
+        "target": {
+          "name": "skylake",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "broadwell"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "9.3.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "hash": "ptv2wpnans7e2gdbcg7lryxvwfsncoeq"
+    },
+    "6iatlmlaznbw2a3ulj5b2aq5p6qpkx2z": {
+      "name": "libxau",
+      "version": "1.0.8",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "ubuntu20.04",
+        "target": {
+          "name": "skylake",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "broadwell"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "9.3.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "dependencies": [
+        {
+          "name": "xproto",
+          "build_hash": "hwgfxv5zq5p5nzoizfzjxgbjame3ohc4",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "oe2nxxgxzffniwc2mgec2qgzwqdeartj"
+    },
+    "hwgfxv5zq5p5nzoizfzjxgbjame3ohc4": {
+      "name": "xproto",
+      "version": "7.0.31",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "ubuntu20.04",
+        "target": {
+          "name": "skylake",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "broadwell"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "9.3.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "hash": "hwgfxv5zq5p5nzoizfzjxgbjame3ohc4"
+    },
+    "akqjzofmocqtxv2h3st5le6ylggpe7un": {
+      "name": "libxdmcp",
+      "version": "1.1.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "ubuntu20.04",
+        "target": {
+          "name": "skylake",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "broadwell"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "9.3.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3615,9 +2206,17 @@
             "build",
             "link"
           ]
+        },
+        {
+          "name": "xproto",
+          "build_hash": "hwgfxv5zq5p5nzoizfzjxgbjame3ohc4",
+          "type": [
+            "build",
+            "link"
+          ]
         }
       ],
-      "hash": "6e7ynhkbwvmkywvus57777zht54n3nbf"
+      "hash": "i5f4puotl4lg3vsotjkybosc6mgxklny"
     },
     "oz6ztxwfvwtjvzlpjsbkruybosamfsm4": {
       "name": "libbsd",
@@ -3737,1133 +2336,6 @@
       },
       "hash": "tbmn7tdoero5fzsrvz76ugfynwoafprg"
     },
-    "ph6q55yiefg6kisz2vc2mlqpr4crppiq": {
-      "name": "gettext",
-      "version": "0.21",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "bzip2": true,
-        "curses": true,
-        "git": true,
-        "libunistring": false,
-        "libxml2": true,
-        "tar": true,
-        "xz": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "bzip2",
-          "build_hash": "sgzboek7irz5ksv2xxleawhpll7lqp6g",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libiconv",
-          "build_hash": "infpf4xwcb7253odbry6ljjcsat2ksp5",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libxml2",
-          "build_hash": "msin5zipxyguohys36aefx7n45gpmxt4",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "ncurses",
-          "build_hash": "2lphm4mbq4uynycwkbvzdxzwbejfjrpj",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "tar",
-          "build_hash": "rnappcbarqhjofjdjobdlbmpmg5t6tch",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "xz",
-          "build_hash": "rysepqc4kpacrxufhrb7tm2dk6sups6v",
-          "type": [
-            "build",
-            "link",
-            "run"
-          ]
-        }
-      ],
-      "hash": "xdbyiv3csgng6m5oyoaud6jm6a34qn7q"
-    },
-    "rnappcbarqhjofjdjobdlbmpmg5t6tch": {
-      "name": "tar",
-      "version": "1.34",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "libiconv",
-          "build_hash": "infpf4xwcb7253odbry6ljjcsat2ksp5",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "fx7hfy2etp4pws5mpudqurfdyj2qhnza"
-    },
-    "3zeczcdd36373oztmu2tiaexoxg34ayi": {
-      "name": "libffi",
-      "version": "3.4.2",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "hash": "3zeczcdd36373oztmu2tiaexoxg34ayi"
-    },
-    "vchkxcvoixs53wfjqfzfj34ech7gjiie": {
-      "name": "sqlite",
-      "version": "3.37.2",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "column_metadata": true,
-        "dynamic_extensions": true,
-        "fts": true,
-        "functions": false,
-        "rtree": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "readline",
-          "build_hash": "y2qtng7fushalglpskcsqjmg6v2ocaww",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "zlib",
-          "build_hash": "y3k56s5znlxpc4kyldndkvo24tg6uhcr",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "nvmkvl3rkbzzfcstnityqhu7z5bsn5md"
-    },
-    "r7bt6ur2oefkgd3bjkzwgunxf2zkvc4m": {
-      "name": "util-linux-uuid",
-      "version": "2.37.4",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "xwyinbqvrbglmaj5bp3ibtxn2drxy7g7"
-    },
-    "44p63vchyzpospvwdcbvkcwo4wavpgye": {
-      "name": "libxcursor",
-      "version": "1.1.14",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "fixesproto",
-          "build_hash": "exnbn7j6kn2fazmgys7ggobosnahhr76",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libx11",
-          "build_hash": "shypd2tz7x4tdwd2kpadwhspvhwxgohv",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libxfixes",
-          "build_hash": "fpyr2w2d752znva5sfwesnikwxs5k3tf",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libxrender",
-          "build_hash": "ynt2uujpiyetbualps3rjo5fjcjeozxs",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "fkytvrrl2awbqex3mkfufv7mxx54465q"
-    },
-    "exnbn7j6kn2fazmgys7ggobosnahhr76": {
-      "name": "fixesproto",
-      "version": "5.0",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "j77nn5uzqq3dpz2swjmxypg4d3ivm5tb"
-    },
-    "shypd2tz7x4tdwd2kpadwhspvhwxgohv": {
-      "name": "libx11",
-      "version": "1.7.0",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "inputproto",
-          "build_hash": "uxjifhawip4bg4rmu45jf52jauo6itox",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "kbproto",
-          "build_hash": "ynh4g2qgp4rrsfczf2lhtej7apnqlhq7",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libxcb",
-          "build_hash": "p2fpgcj4cxiawkttk5ghcgftrx42xw62",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "perl",
-          "build_hash": "36p7mv74hm44ual2773rjqhqstxamo4h",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "xextproto",
-          "build_hash": "3abmpxullweske2le4x2l6b5h7imbkth",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "xproto",
-          "build_hash": "rmt44cy72ph6sicbo32dxnofav7pztjr",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "xtrans",
-          "build_hash": "a53kfwtb4xwhvkhkthcqssq7dcrrvyvc",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "3rrus7p5hzqda3iiu7nhpdhb3q7juw3a"
-    },
-    "uxjifhawip4bg4rmu45jf52jauo6itox": {
-      "name": "inputproto",
-      "version": "2.3.2",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "q32kfh6gbjqjnzmfi22ae7ghixy7adrx"
-    },
-    "ynh4g2qgp4rrsfczf2lhtej7apnqlhq7": {
-      "name": "kbproto",
-      "version": "1.0.7",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "z25htfaqauifgxj5qmoqisq3fohtltib"
-    },
-    "p2fpgcj4cxiawkttk5ghcgftrx42xw62": {
-      "name": "libxcb",
-      "version": "1.14",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "libpthread-stubs",
-          "build_hash": "ptv2wpnans7e2gdbcg7lryxvwfsncoeq",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libxau",
-          "build_hash": "itvmjfllhilrw34h2ldvvpgmifn7grm6",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libxdmcp",
-          "build_hash": "2acl4a3em7fcobbwtcj4keyy4pxifnds",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "xcb-proto",
-          "build_hash": "vsj4ritcqwpcmadbhjvwfvmfmrkvaem6",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "e5lj34bysnzmrg2r3to54jgj44r2kkr3"
-    },
-    "ptv2wpnans7e2gdbcg7lryxvwfsncoeq": {
-      "name": "libpthread-stubs",
-      "version": "0.4",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "hash": "ptv2wpnans7e2gdbcg7lryxvwfsncoeq"
-    },
-    "itvmjfllhilrw34h2ldvvpgmifn7grm6": {
-      "name": "libxau",
-      "version": "1.0.8",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "xproto",
-          "build_hash": "rmt44cy72ph6sicbo32dxnofav7pztjr",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "oe2nxxgxzffniwc2mgec2qgzwqdeartj"
-    },
-    "2acl4a3em7fcobbwtcj4keyy4pxifnds": {
-      "name": "libxdmcp",
-      "version": "1.1.2",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "libbsd",
-          "build_hash": "oz6ztxwfvwtjvzlpjsbkruybosamfsm4",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "xproto",
-          "build_hash": "rmt44cy72ph6sicbo32dxnofav7pztjr",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "i5f4puotl4lg3vsotjkybosc6mgxklny"
-    },
     "vsj4ritcqwpcmadbhjvwfvmfmrkvaem6": {
       "name": "xcb-proto",
       "version": "1.14.1",
@@ -4918,7 +2390,7 @@
       },
       "hash": "vsj4ritcqwpcmadbhjvwfvmfmrkvaem6"
     },
-    "3abmpxullweske2le4x2l6b5h7imbkth": {
+    "4utkymwdv4nzbpe3l4y4yhzwqmq4piil": {
       "name": "xextproto",
       "version": "7.3.0",
       "arch": {
@@ -4970,25 +2442,63 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "dependencies": [
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        }
-      ],
       "hash": "4utkymwdv4nzbpe3l4y4yhzwqmq4piil"
     },
-    "fpyr2w2d752znva5sfwesnikwxs5k3tf": {
+    "ndjwuhlay5hpxmpngcpztwggqzwx4ii5": {
+      "name": "xtrans",
+      "version": "1.3.5",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "ubuntu20.04",
+        "target": {
+          "name": "skylake",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "broadwell"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "9.3.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "hash": "ndjwuhlay5hpxmpngcpztwggqzwx4ii5"
+    },
+    "47h5j5dk5n5dlp6qy2ihc2ag2ydhckup": {
       "name": "libxfixes",
       "version": "5.0.2",
       "arch": {
@@ -5043,7 +2553,7 @@
       "dependencies": [
         {
           "name": "fixesproto",
-          "build_hash": "exnbn7j6kn2fazmgys7ggobosnahhr76",
+          "build_hash": "j77nn5uzqq3dpz2swjmxypg4d3ivm5tb",
           "type": [
             "build",
             "link"
@@ -5051,29 +2561,15 @@
         },
         {
           "name": "libx11",
-          "build_hash": "shypd2tz7x4tdwd2kpadwhspvhwxgohv",
+          "build_hash": "p7edhqlrh55noi25f6ovyk5nezl33zac",
           "type": [
             "build",
             "link"
           ]
         },
         {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "xextproto",
-          "build_hash": "3abmpxullweske2le4x2l6b5h7imbkth",
+          "build_hash": "4utkymwdv4nzbpe3l4y4yhzwqmq4piil",
           "type": [
             "build",
             "link"
@@ -5081,7 +2577,7 @@
         },
         {
           "name": "xproto",
-          "build_hash": "rmt44cy72ph6sicbo32dxnofav7pztjr",
+          "build_hash": "hwgfxv5zq5p5nzoizfzjxgbjame3ohc4",
           "type": [
             "build",
             "link"
@@ -5090,7 +2586,7 @@
       ],
       "hash": "lf4vsjbxycdbdh3ankkd2dhq73q4yjxo"
     },
-    "ynt2uujpiyetbualps3rjo5fjcjeozxs": {
+    "khm2kw6hzdd565uxz6mn2xcwzggmxsp7": {
       "name": "libxrender",
       "version": "0.9.10",
       "arch": {
@@ -5145,38 +2641,24 @@
       "dependencies": [
         {
           "name": "libx11",
-          "build_hash": "shypd2tz7x4tdwd2kpadwhspvhwxgohv",
+          "build_hash": "p7edhqlrh55noi25f6ovyk5nezl33zac",
           "type": [
             "build",
             "link"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
           ]
         },
         {
           "name": "renderproto",
-          "build_hash": "gjl52k5727tyw6dgtr2g7sr4qvfh6whz",
+          "build_hash": "pjokmeruxrelei2z3convmg54djatrsb",
           "type": [
             "build",
             "link"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
           ]
         }
       ],
       "hash": "o7lchwzz2zgfmqbzlmhxaagsvi75ikgc"
     },
-    "gjl52k5727tyw6dgtr2g7sr4qvfh6whz": {
+    "pjokmeruxrelei2z3convmg54djatrsb": {
       "name": "renderproto",
       "version": "0.11.1",
       "arch": {
@@ -5228,25 +2710,9 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "dependencies": [
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        }
-      ],
       "hash": "pjokmeruxrelei2z3convmg54djatrsb"
     },
-    "6bpajfovb6upqvir7u6kjn3ndtql7sqg": {
+    "ykazj4l56zsg4dufj6uahovlvx5kzk6k": {
       "name": "libxdamage",
       "version": "1.1.4",
       "arch": {
@@ -5301,7 +2767,7 @@
       "dependencies": [
         {
           "name": "damageproto",
-          "build_hash": "sefyg3a5otj2gn5l4sqc5bgz63dwhfpv",
+          "build_hash": "sjczmd63pzatw3qlr6n7lvwlqcybqaoc",
           "type": [
             "build",
             "link"
@@ -5309,7 +2775,7 @@
         },
         {
           "name": "fixesproto",
-          "build_hash": "exnbn7j6kn2fazmgys7ggobosnahhr76",
+          "build_hash": "j77nn5uzqq3dpz2swjmxypg4d3ivm5tb",
           "type": [
             "build",
             "link"
@@ -5317,7 +2783,7 @@
         },
         {
           "name": "libx11",
-          "build_hash": "shypd2tz7x4tdwd2kpadwhspvhwxgohv",
+          "build_hash": "p7edhqlrh55noi25f6ovyk5nezl33zac",
           "type": [
             "build",
             "link"
@@ -5325,29 +2791,15 @@
         },
         {
           "name": "libxfixes",
-          "build_hash": "fpyr2w2d752znva5sfwesnikwxs5k3tf",
+          "build_hash": "47h5j5dk5n5dlp6qy2ihc2ag2ydhckup",
           "type": [
             "build",
             "link"
           ]
         },
         {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "xextproto",
-          "build_hash": "3abmpxullweske2le4x2l6b5h7imbkth",
+          "build_hash": "4utkymwdv4nzbpe3l4y4yhzwqmq4piil",
           "type": [
             "build",
             "link"
@@ -5356,7 +2808,7 @@
       ],
       "hash": "iioki4g4uzeaphwxq7lg5svray3qqrw3"
     },
-    "sefyg3a5otj2gn5l4sqc5bgz63dwhfpv": {
+    "sjczmd63pzatw3qlr6n7lvwlqcybqaoc": {
       "name": "damageproto",
       "version": "1.2.1",
       "arch": {
@@ -5408,25 +2860,9 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "dependencies": [
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        }
-      ],
       "hash": "sjczmd63pzatw3qlr6n7lvwlqcybqaoc"
     },
-    "kt6nay6y7w2rmeezmkg7tvnob3buqkho": {
+    "5l5s2shcveuvbc47qbl6a5sharsfo5by": {
       "name": "libxft",
       "version": "2.3.2",
       "arch": {
@@ -5481,7 +2917,7 @@
       "dependencies": [
         {
           "name": "fontconfig",
-          "build_hash": "dlejkkwpp3gqmoddkesgbkxawekr3gx2",
+          "build_hash": "s4q6bkof3y7g67ufqnmms3w6zegdhd3z",
           "type": [
             "build",
             "link"
@@ -5489,7 +2925,7 @@
         },
         {
           "name": "freetype",
-          "build_hash": "izxccilmcmnwzvbkkltnf5hpzh6p2swp",
+          "build_hash": "kdzo25ymfyi2vlqhwewq6u5rzavokewv",
           "type": [
             "build",
             "link"
@@ -5497,7 +2933,7 @@
         },
         {
           "name": "libx11",
-          "build_hash": "shypd2tz7x4tdwd2kpadwhspvhwxgohv",
+          "build_hash": "p7edhqlrh55noi25f6ovyk5nezl33zac",
           "type": [
             "build",
             "link"
@@ -5505,30 +2941,16 @@
         },
         {
           "name": "libxrender",
-          "build_hash": "ynt2uujpiyetbualps3rjo5fjcjeozxs",
+          "build_hash": "khm2kw6hzdd565uxz6mn2xcwzggmxsp7",
           "type": [
             "build",
             "link"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
           ]
         }
       ],
       "hash": "isurchf2u2gr7raxm3tjnehhksflbhmu"
     },
-    "wcjurw2jrhmz7hudpsqnj44ymiaaqu74": {
+    "vby2msrim5vkzq7qcbh6fymh6v2urch7": {
       "name": "libxi",
       "version": "1.7.6",
       "arch": {
@@ -5583,7 +3005,7 @@
       "dependencies": [
         {
           "name": "fixesproto",
-          "build_hash": "exnbn7j6kn2fazmgys7ggobosnahhr76",
+          "build_hash": "j77nn5uzqq3dpz2swjmxypg4d3ivm5tb",
           "type": [
             "build",
             "link"
@@ -5591,7 +3013,7 @@
         },
         {
           "name": "inputproto",
-          "build_hash": "uxjifhawip4bg4rmu45jf52jauo6itox",
+          "build_hash": "q32kfh6gbjqjnzmfi22ae7ghixy7adrx",
           "type": [
             "build",
             "link"
@@ -5599,7 +3021,7 @@
         },
         {
           "name": "libx11",
-          "build_hash": "shypd2tz7x4tdwd2kpadwhspvhwxgohv",
+          "build_hash": "p7edhqlrh55noi25f6ovyk5nezl33zac",
           "type": [
             "build",
             "link"
@@ -5607,7 +3029,7 @@
         },
         {
           "name": "libxext",
-          "build_hash": "w4wp7d3beagi7xyx5ruf3taexfnc7wv2",
+          "build_hash": "h3xpjhywif37h4bvu2iyi7p6hhjylwje",
           "type": [
             "build",
             "link"
@@ -5615,22 +3037,15 @@
         },
         {
           "name": "libxfixes",
-          "build_hash": "fpyr2w2d752znva5sfwesnikwxs5k3tf",
+          "build_hash": "47h5j5dk5n5dlp6qy2ihc2ag2ydhckup",
           "type": [
             "build",
             "link"
           ]
         },
         {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "xextproto",
-          "build_hash": "3abmpxullweske2le4x2l6b5h7imbkth",
+          "build_hash": "4utkymwdv4nzbpe3l4y4yhzwqmq4piil",
           "type": [
             "build",
             "link"
@@ -5638,7 +3053,7 @@
         },
         {
           "name": "xproto",
-          "build_hash": "rmt44cy72ph6sicbo32dxnofav7pztjr",
+          "build_hash": "hwgfxv5zq5p5nzoizfzjxgbjame3ohc4",
           "type": [
             "build",
             "link"
@@ -5647,7 +3062,7 @@
       ],
       "hash": "aoyjxv732sk2a6pqvskiruh7wtnw7jyy"
     },
-    "w4wp7d3beagi7xyx5ruf3taexfnc7wv2": {
+    "h3xpjhywif37h4bvu2iyi7p6hhjylwje": {
       "name": "libxext",
       "version": "1.3.3",
       "arch": {
@@ -5702,29 +3117,15 @@
       "dependencies": [
         {
           "name": "libx11",
-          "build_hash": "shypd2tz7x4tdwd2kpadwhspvhwxgohv",
+          "build_hash": "p7edhqlrh55noi25f6ovyk5nezl33zac",
           "type": [
             "build",
             "link"
           ]
         },
         {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "xextproto",
-          "build_hash": "3abmpxullweske2le4x2l6b5h7imbkth",
+          "build_hash": "4utkymwdv4nzbpe3l4y4yhzwqmq4piil",
           "type": [
             "build",
             "link"
@@ -5732,7 +3133,7 @@
         },
         {
           "name": "xproto",
-          "build_hash": "rmt44cy72ph6sicbo32dxnofav7pztjr",
+          "build_hash": "hwgfxv5zq5p5nzoizfzjxgbjame3ohc4",
           "type": [
             "build",
             "link"
@@ -5741,7 +3142,7 @@
       ],
       "hash": "mbg73fr7pqj2mpoxbvuc6kqmelef3r4g"
     },
-    "nomhtywmr2xovzbsbf33ekwloscaykmw": {
+    "m2zu7epeh3irkmorjaycc66jvmz6tbfn": {
       "name": "libxinerama",
       "version": "1.1.3",
       "arch": {
@@ -5796,7 +3197,7 @@
       "dependencies": [
         {
           "name": "libx11",
-          "build_hash": "shypd2tz7x4tdwd2kpadwhspvhwxgohv",
+          "build_hash": "p7edhqlrh55noi25f6ovyk5nezl33zac",
           "type": [
             "build",
             "link"
@@ -5804,29 +3205,15 @@
         },
         {
           "name": "libxext",
-          "build_hash": "w4wp7d3beagi7xyx5ruf3taexfnc7wv2",
+          "build_hash": "h3xpjhywif37h4bvu2iyi7p6hhjylwje",
           "type": [
             "build",
             "link"
           ]
         },
         {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "xextproto",
-          "build_hash": "3abmpxullweske2le4x2l6b5h7imbkth",
+          "build_hash": "4utkymwdv4nzbpe3l4y4yhzwqmq4piil",
           "type": [
             "build",
             "link"
@@ -5834,7 +3221,7 @@
         },
         {
           "name": "xineramaproto",
-          "build_hash": "cwm3ylhezi4oelunczkch7kcvudrowij",
+          "build_hash": "pqtcg3osi7ea74hl7fi2a7ew2dsua2sp",
           "type": [
             "build",
             "link"
@@ -5843,7 +3230,7 @@
       ],
       "hash": "slzke3q5hv3fcsedstqtqjiypcs5j5ad"
     },
-    "cwm3ylhezi4oelunczkch7kcvudrowij": {
+    "pqtcg3osi7ea74hl7fi2a7ew2dsua2sp": {
       "name": "xineramaproto",
       "version": "1.2.1",
       "arch": {
@@ -5895,25 +3282,9 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "dependencies": [
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        }
-      ],
       "hash": "pqtcg3osi7ea74hl7fi2a7ew2dsua2sp"
     },
-    "4mr4yzbw4cfchdjzdj2y4ugwfm73acjt": {
+    "i3tdnxkq4zlhuhbojihv47pho3hpoxqh": {
       "name": "libxmu",
       "version": "1.1.2",
       "arch": {
@@ -5968,7 +3339,7 @@
       "dependencies": [
         {
           "name": "libx11",
-          "build_hash": "shypd2tz7x4tdwd2kpadwhspvhwxgohv",
+          "build_hash": "p7edhqlrh55noi25f6ovyk5nezl33zac",
           "type": [
             "build",
             "link"
@@ -5976,7 +3347,7 @@
         },
         {
           "name": "libxext",
-          "build_hash": "w4wp7d3beagi7xyx5ruf3taexfnc7wv2",
+          "build_hash": "h3xpjhywif37h4bvu2iyi7p6hhjylwje",
           "type": [
             "build",
             "link"
@@ -5984,29 +3355,15 @@
         },
         {
           "name": "libxt",
-          "build_hash": "77v6stexuchzaclowwsko52khqtvhhz2",
+          "build_hash": "4eh6lkh5batf5tgt3qreprect32yxswq",
           "type": [
             "build",
             "link"
           ]
         },
         {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "xextproto",
-          "build_hash": "3abmpxullweske2le4x2l6b5h7imbkth",
+          "build_hash": "4utkymwdv4nzbpe3l4y4yhzwqmq4piil",
           "type": [
             "build",
             "link"
@@ -6015,7 +3372,7 @@
       ],
       "hash": "udo7ldae2wvskyuugee34m3zoneqdfng"
     },
-    "77v6stexuchzaclowwsko52khqtvhhz2": {
+    "4eh6lkh5batf5tgt3qreprect32yxswq": {
       "name": "libxt",
       "version": "1.1.5",
       "arch": {
@@ -6070,7 +3427,7 @@
       "dependencies": [
         {
           "name": "kbproto",
-          "build_hash": "ynh4g2qgp4rrsfczf2lhtej7apnqlhq7",
+          "build_hash": "z25htfaqauifgxj5qmoqisq3fohtltib",
           "type": [
             "build",
             "link"
@@ -6078,7 +3435,7 @@
         },
         {
           "name": "libice",
-          "build_hash": "xgqcbqfgq66mmjksnap5m25rrarb6c4w",
+          "build_hash": "yiel3jiunuishit76ilx2n4h6pp3u4ln",
           "type": [
             "build",
             "link"
@@ -6086,7 +3443,7 @@
         },
         {
           "name": "libsm",
-          "build_hash": "s4z6isjhs6fj5sbexm37qu4f33dnfggy",
+          "build_hash": "7byphxr5rjyhjl4rpe7pvzeila6kwtvq",
           "type": [
             "build",
             "link"
@@ -6094,29 +3451,15 @@
         },
         {
           "name": "libx11",
-          "build_hash": "shypd2tz7x4tdwd2kpadwhspvhwxgohv",
+          "build_hash": "p7edhqlrh55noi25f6ovyk5nezl33zac",
           "type": [
             "build",
             "link"
           ]
         },
         {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "xproto",
-          "build_hash": "rmt44cy72ph6sicbo32dxnofav7pztjr",
+          "build_hash": "hwgfxv5zq5p5nzoizfzjxgbjame3ohc4",
           "type": [
             "build",
             "link"
@@ -6125,7 +3468,7 @@
       ],
       "hash": "j4h23kjbpdhaxbqgkeropvyhumntgnma"
     },
-    "xgqcbqfgq66mmjksnap5m25rrarb6c4w": {
+    "yiel3jiunuishit76ilx2n4h6pp3u4ln": {
       "name": "libice",
       "version": "1.0.9",
       "arch": {
@@ -6179,22 +3522,8 @@
       },
       "dependencies": [
         {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "xproto",
-          "build_hash": "rmt44cy72ph6sicbo32dxnofav7pztjr",
+          "build_hash": "hwgfxv5zq5p5nzoizfzjxgbjame3ohc4",
           "type": [
             "build",
             "link"
@@ -6202,7 +3531,7 @@
         },
         {
           "name": "xtrans",
-          "build_hash": "a53kfwtb4xwhvkhkthcqssq7dcrrvyvc",
+          "build_hash": "ndjwuhlay5hpxmpngcpztwggqzwx4ii5",
           "type": [
             "build",
             "link"
@@ -6211,7 +3540,7 @@
       ],
       "hash": "rny6kiva3vevwrfn2zcgwhdewkujy5kq"
     },
-    "s4z6isjhs6fj5sbexm37qu4f33dnfggy": {
+    "7byphxr5rjyhjl4rpe7pvzeila6kwtvq": {
       "name": "libsm",
       "version": "1.2.3",
       "arch": {
@@ -6266,37 +3595,23 @@
       "dependencies": [
         {
           "name": "libice",
-          "build_hash": "xgqcbqfgq66mmjksnap5m25rrarb6c4w",
+          "build_hash": "yiel3jiunuishit76ilx2n4h6pp3u4ln",
           "type": [
             "build",
             "link"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
           ]
         },
         {
           "name": "util-linux-uuid",
-          "build_hash": "r7bt6ur2oefkgd3bjkzwgunxf2zkvc4m",
+          "build_hash": "xwyinbqvrbglmaj5bp3ibtxn2drxy7g7",
           "type": [
             "build",
             "link"
           ]
         },
         {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "xproto",
-          "build_hash": "rmt44cy72ph6sicbo32dxnofav7pztjr",
+          "build_hash": "hwgfxv5zq5p5nzoizfzjxgbjame3ohc4",
           "type": [
             "build",
             "link"
@@ -6304,7 +3619,7 @@
         },
         {
           "name": "xtrans",
-          "build_hash": "a53kfwtb4xwhvkhkthcqssq7dcrrvyvc",
+          "build_hash": "ndjwuhlay5hpxmpngcpztwggqzwx4ii5",
           "type": [
             "build",
             "link"
@@ -6313,7 +3628,7 @@
       ],
       "hash": "km3cnecivcto7w76ddbfa74bn45z6p6g"
     },
-    "2aka2rwug4bfv4vr7iuekigqlyuky6o2": {
+    "5yglhclftyl476nfhyfudyrbnpqr2tlw": {
       "name": "libxrandr",
       "version": "1.5.0",
       "arch": {
@@ -6368,7 +3683,7 @@
       "dependencies": [
         {
           "name": "libx11",
-          "build_hash": "shypd2tz7x4tdwd2kpadwhspvhwxgohv",
+          "build_hash": "p7edhqlrh55noi25f6ovyk5nezl33zac",
           "type": [
             "build",
             "link"
@@ -6376,7 +3691,7 @@
         },
         {
           "name": "libxext",
-          "build_hash": "w4wp7d3beagi7xyx5ruf3taexfnc7wv2",
+          "build_hash": "h3xpjhywif37h4bvu2iyi7p6hhjylwje",
           "type": [
             "build",
             "link"
@@ -6384,22 +3699,15 @@
         },
         {
           "name": "libxrender",
-          "build_hash": "ynt2uujpiyetbualps3rjo5fjcjeozxs",
+          "build_hash": "khm2kw6hzdd565uxz6mn2xcwzggmxsp7",
           "type": [
             "build",
             "link"
           ]
         },
         {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "randrproto",
-          "build_hash": "vroz3oxcriryxc3v3ur3t2zlojt6fhxo",
+          "build_hash": "ifwh67jh4rlkcebopvs6a6gdrpq5udx3",
           "type": [
             "build",
             "link"
@@ -6407,22 +3715,15 @@
         },
         {
           "name": "renderproto",
-          "build_hash": "gjl52k5727tyw6dgtr2g7sr4qvfh6whz",
+          "build_hash": "pjokmeruxrelei2z3convmg54djatrsb",
           "type": [
             "build",
             "link"
           ]
         },
         {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "xextproto",
-          "build_hash": "3abmpxullweske2le4x2l6b5h7imbkth",
+          "build_hash": "4utkymwdv4nzbpe3l4y4yhzwqmq4piil",
           "type": [
             "build",
             "link"
@@ -6431,7 +3732,7 @@
       ],
       "hash": "shwt53z5uefxw3sivyw55zb2zux7bgiu"
     },
-    "vroz3oxcriryxc3v3ur3t2zlojt6fhxo": {
+    "ifwh67jh4rlkcebopvs6a6gdrpq5udx3": {
       "name": "randrproto",
       "version": "1.5.0",
       "arch": {
@@ -6483,25 +3784,9 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "dependencies": [
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        }
-      ],
       "hash": "ifwh67jh4rlkcebopvs6a6gdrpq5udx3"
     },
-    "g6pd7ruwbh3q2kunhkpqmmljgmr2zazp": {
+    "qtsvfhly53va6jpw7uxos4xwluawfv6o": {
       "name": "mesa",
       "version": "21.3.7",
       "arch": {
@@ -6571,20 +3856,6 @@
       ],
       "dependencies": [
         {
-          "name": "bison",
-          "build_hash": "6r3qjo7k4yw3mimsewmghtdyt2bjrzu7",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "cmake",
-          "build_hash": "m6a4mwcwksws42gho3apcknzrhvoi3az",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "expat",
           "build_hash": "xnv3vx2zxtqrlp3dsz2wpyhuzhdtukll",
           "type": [
@@ -6593,22 +3864,8 @@
           ]
         },
         {
-          "name": "flex",
-          "build_hash": "ktpj4wdkpa73ewpvjp5xwjcin6pzmsf6",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "gettext",
-          "build_hash": "ph6q55yiefg6kisz2vc2mlqpr4crppiq",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "glproto",
-          "build_hash": "2u32br65klg5asemaesb5zmrvcat5z7t",
+          "build_hash": "yhikbqla5ji24q7iosvur6k3oxuosuvj",
           "type": [
             "build",
             "link"
@@ -6624,7 +3881,7 @@
         },
         {
           "name": "libx11",
-          "build_hash": "shypd2tz7x4tdwd2kpadwhspvhwxgohv",
+          "build_hash": "p7edhqlrh55noi25f6ovyk5nezl33zac",
           "type": [
             "build",
             "link"
@@ -6632,7 +3889,7 @@
         },
         {
           "name": "libxcb",
-          "build_hash": "p2fpgcj4cxiawkttk5ghcgftrx42xw62",
+          "build_hash": "m4ab75dfixyrnysiven777dyclzu52j7",
           "type": [
             "build",
             "link"
@@ -6640,7 +3897,7 @@
         },
         {
           "name": "libxext",
-          "build_hash": "w4wp7d3beagi7xyx5ruf3taexfnc7wv2",
+          "build_hash": "h3xpjhywif37h4bvu2iyi7p6hhjylwje",
           "type": [
             "build",
             "link"
@@ -6648,50 +3905,15 @@
         },
         {
           "name": "libxt",
-          "build_hash": "77v6stexuchzaclowwsko52khqtvhhz2",
+          "build_hash": "4eh6lkh5batf5tgt3qreprect32yxswq",
           "type": [
             "build",
             "link"
           ]
         },
         {
-          "name": "meson",
-          "build_hash": "k2vvfahn2cdcoxnncxzreqkbu26n546o",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "ninja",
-          "build_hash": "2vq26oywvca6nhxzro3fgbgkcgnocdx7",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "py-mako",
-          "build_hash": "ww5hgl6rg4leqlkjf37nlz27xe23poob",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "python",
-          "build_hash": "5u3l3fpjyw37iryspwfe7vxaigkxkkbd",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "xrandr",
-          "build_hash": "ndozs6rxush2h7s53nkccrbxtmvksyjd",
+          "build_hash": "4ewbj7fvpdmgt6azwam5rtvkmnwionei",
           "type": [
             "build",
             "link"
@@ -6708,9 +3930,9 @@
       ],
       "hash": "tv4ty6y5vyljytfoqvxir6xygis74trd"
     },
-    "6r3qjo7k4yw3mimsewmghtdyt2bjrzu7": {
-      "name": "bison",
-      "version": "3.8.2",
+    "xnv3vx2zxtqrlp3dsz2wpyhuzhdtukll": {
+      "name": "expat",
+      "version": "2.4.8",
       "arch": {
         "platform": "linux",
         "platform_os": "ubuntu20.04",
@@ -6753,6 +3975,7 @@
       },
       "namespace": "builtin",
       "parameters": {
+        "libbsd": true,
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -6762,177 +3985,17 @@
       },
       "dependencies": [
         {
-          "name": "diffutils",
-          "build_hash": "vhwuajizcnpfo2jkjqbo76z4dxjbiyzi",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "m4",
-          "build_hash": "p5lhjnzfkkvgkrjiipqjp7vqjkatq7uy",
+          "name": "libbsd",
+          "build_hash": "oz6ztxwfvwtjvzlpjsbkruybosamfsm4",
           "type": [
             "build",
-            "run"
-          ]
-        },
-        {
-          "name": "perl",
-          "build_hash": "36p7mv74hm44ual2773rjqhqstxamo4h",
-          "type": [
-            "build"
+            "link"
           ]
         }
       ],
-      "hash": "3v5yytcxndhcepmsiakrfqnoe54y4ydz"
+      "hash": "6e7ynhkbwvmkywvus57777zht54n3nbf"
     },
-    "ktpj4wdkpa73ewpvjp5xwjcin6pzmsf6": {
-      "name": "flex",
-      "version": "2.6.3",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "lex": true,
-        "nls": false,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "bison",
-          "build_hash": "6r3qjo7k4yw3mimsewmghtdyt2bjrzu7",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "diffutils",
-          "build_hash": "vhwuajizcnpfo2jkjqbo76z4dxjbiyzi",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "findutils",
-          "build_hash": "n5umxiuyx67ihj2pvn55tee3ui4icams",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "m4",
-          "build_hash": "p5lhjnzfkkvgkrjiipqjp7vqjkatq7uy",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "u5hqkvesndxn5vd23tze3jcualp3uygl"
-    },
-    "n5umxiuyx67ihj2pvn55tee3ui4icams": {
-      "name": "findutils",
-      "version": "4.8.0",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "patches": [
-          "440b9543365b4692a2e6e0b5674809659846658d34d1dfc542c4397c8d668b92"
-        ],
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "patches": [
-        "440b9543365b4692a2e6e0b5674809659846658d34d1dfc542c4397c8d668b92"
-      ],
-      "hash": "n5umxiuyx67ihj2pvn55tee3ui4icams"
-    },
-    "2u32br65klg5asemaesb5zmrvcat5z7t": {
+    "yhikbqla5ji24q7iosvur6k3oxuosuvj": {
       "name": "glproto",
       "version": "1.4.17",
       "arch": {
@@ -6984,22 +4047,6 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "dependencies": [
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        }
-      ],
       "hash": "yhikbqla5ji24q7iosvur6k3oxuosuvj"
     },
     "wnvklbml2cpfbgf4ka4txvq6smmd6a3g": {
@@ -7074,560 +4121,7 @@
       },
       "hash": "wnvklbml2cpfbgf4ka4txvq6smmd6a3g"
     },
-    "k2vvfahn2cdcoxnncxzreqkbu26n546o": {
-      "name": "meson",
-      "version": "0.61.2",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "patches": [
-          "aa6c50d5a2aeb1a487d16f6712be4357fefb923aae37ab830699b07338388287"
-        ],
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "patches": [
-        "aa6c50d5a2aeb1a487d16f6712be4357fefb923aae37ab830699b07338388287"
-      ],
-      "dependencies": [
-        {
-          "name": "ninja",
-          "build_hash": "2vq26oywvca6nhxzro3fgbgkcgnocdx7",
-          "type": [
-            "run"
-          ]
-        },
-        {
-          "name": "py-pip",
-          "build_hash": "bnd4guwd6bd6iss6a2k5fh6sxayuvwp4",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "py-setuptools",
-          "build_hash": "jibdhaavmup766imwhmpgflsv4xnxzqz",
-          "type": [
-            "build",
-            "run"
-          ]
-        },
-        {
-          "name": "py-wheel",
-          "build_hash": "b3gtqdklzb6vlngxdmgjwb2nb27yvthz",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "python",
-          "build_hash": "5u3l3fpjyw37iryspwfe7vxaigkxkkbd",
-          "type": [
-            "build",
-            "run"
-          ]
-        }
-      ],
-      "hash": "l73oglztxelo6pguykl6xbt24bgnkuwp"
-    },
-    "2vq26oywvca6nhxzro3fgbgkcgnocdx7": {
-      "name": "ninja",
-      "version": "1.10.2",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "python",
-          "build_hash": "5u3l3fpjyw37iryspwfe7vxaigkxkkbd",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "7jgfxtarknhomcyvk35biqg3vueftlqc"
-    },
-    "bnd4guwd6bd6iss6a2k5fh6sxayuvwp4": {
-      "name": "py-pip",
-      "version": "21.3.1",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "python",
-          "build_hash": "5u3l3fpjyw37iryspwfe7vxaigkxkkbd",
-          "type": [
-            "build",
-            "run"
-          ]
-        }
-      ],
-      "hash": "ymc3iaw2c6jkvooqtw3bztb5oy6zknfc"
-    },
-    "jibdhaavmup766imwhmpgflsv4xnxzqz": {
-      "name": "py-setuptools",
-      "version": "59.4.0",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "py-pip",
-          "build_hash": "bnd4guwd6bd6iss6a2k5fh6sxayuvwp4",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "py-wheel",
-          "build_hash": "b3gtqdklzb6vlngxdmgjwb2nb27yvthz",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "python",
-          "build_hash": "5u3l3fpjyw37iryspwfe7vxaigkxkkbd",
-          "type": [
-            "build",
-            "run"
-          ]
-        }
-      ],
-      "hash": "em44oeaprwd2v4pf2rhmstu4dwusxr2u"
-    },
-    "b3gtqdklzb6vlngxdmgjwb2nb27yvthz": {
-      "name": "py-wheel",
-      "version": "0.37.0",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "py-pip",
-          "build_hash": "bnd4guwd6bd6iss6a2k5fh6sxayuvwp4",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "python",
-          "build_hash": "5u3l3fpjyw37iryspwfe7vxaigkxkkbd",
-          "type": [
-            "build",
-            "run"
-          ]
-        }
-      ],
-      "hash": "uar2n5wzq453tmlyj2xbabsv4c7rata2"
-    },
-    "ww5hgl6rg4leqlkjf37nlz27xe23poob": {
-      "name": "py-mako",
-      "version": "1.1.6",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "py-markupsafe",
-          "build_hash": "hm5ny7aae6uqluo54zdjnf7fddc6o7w6",
-          "type": [
-            "build",
-            "run"
-          ]
-        },
-        {
-          "name": "py-pip",
-          "build_hash": "bnd4guwd6bd6iss6a2k5fh6sxayuvwp4",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "py-setuptools",
-          "build_hash": "jibdhaavmup766imwhmpgflsv4xnxzqz",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "py-wheel",
-          "build_hash": "b3gtqdklzb6vlngxdmgjwb2nb27yvthz",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "python",
-          "build_hash": "5u3l3fpjyw37iryspwfe7vxaigkxkkbd",
-          "type": [
-            "build",
-            "run"
-          ]
-        }
-      ],
-      "hash": "kx4p4xw55dzm4rkmbt5hw4gzgxl5byvi"
-    },
-    "hm5ny7aae6uqluo54zdjnf7fddc6o7w6": {
-      "name": "py-markupsafe",
-      "version": "2.0.1",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "ubuntu20.04",
-        "target": {
-          "name": "skylake",
-          "vendor": "GenuineIntel",
-          "features": [
-            "adx",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "f16c",
-            "fma",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "popcnt",
-            "rdrand",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "ssse3",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "broadwell"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "9.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "py-pip",
-          "build_hash": "bnd4guwd6bd6iss6a2k5fh6sxayuvwp4",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "py-setuptools",
-          "build_hash": "jibdhaavmup766imwhmpgflsv4xnxzqz",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "py-wheel",
-          "build_hash": "b3gtqdklzb6vlngxdmgjwb2nb27yvthz",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "python",
-          "build_hash": "5u3l3fpjyw37iryspwfe7vxaigkxkkbd",
-          "type": [
-            "build",
-            "run"
-          ]
-        }
-      ],
-      "hash": "fzysrgbpnxd4rlksggsgn3hxwkyyysnc"
-    },
-    "ndozs6rxush2h7s53nkccrbxtmvksyjd": {
+    "4ewbj7fvpdmgt6azwam5rtvkmnwionei": {
       "name": "xrandr",
       "version": "1.5.0",
       "arch": {
@@ -7682,7 +4176,7 @@
       "dependencies": [
         {
           "name": "libx11",
-          "build_hash": "shypd2tz7x4tdwd2kpadwhspvhwxgohv",
+          "build_hash": "p7edhqlrh55noi25f6ovyk5nezl33zac",
           "type": [
             "build",
             "link"
@@ -7690,7 +4184,7 @@
         },
         {
           "name": "libxrandr",
-          "build_hash": "2aka2rwug4bfv4vr7iuekigqlyuky6o2",
+          "build_hash": "5yglhclftyl476nfhyfudyrbnpqr2tlw",
           "type": [
             "build",
             "link"
@@ -7698,37 +4192,23 @@
         },
         {
           "name": "libxrender",
-          "build_hash": "ynt2uujpiyetbualps3rjo5fjcjeozxs",
+          "build_hash": "khm2kw6hzdd565uxz6mn2xcwzggmxsp7",
           "type": [
             "build",
             "link"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "5bckkoeicca3dtolbeyz6tnnyxwcsfn5",
-          "type": [
-            "build"
           ]
         },
         {
           "name": "randrproto",
-          "build_hash": "vroz3oxcriryxc3v3ur3t2zlojt6fhxo",
+          "build_hash": "ifwh67jh4rlkcebopvs6a6gdrpq5udx3",
           "type": [
             "build",
             "link"
           ]
         },
         {
-          "name": "util-macros",
-          "build_hash": "zjpklocahhfunvir4op6ctfdisr2t7ry",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "xproto",
-          "build_hash": "rmt44cy72ph6sicbo32dxnofav7pztjr",
+          "build_hash": "hwgfxv5zq5p5nzoizfzjxgbjame3ohc4",
           "type": [
             "build",
             "link"
@@ -7737,7 +4217,7 @@
       ],
       "hash": "yc4oypkefcey7ymcvof7btwxhmm2zcrn"
     },
-    "n7n76ainbmus54ygtz6dovnf53x44jt4": {
+    "vhx26p3k4pexoopmaclu7pgufofe7zow": {
       "name": "mesa-glu",
       "version": "9.0.1",
       "arch": {
@@ -7792,7 +4272,7 @@
       "dependencies": [
         {
           "name": "mesa",
-          "build_hash": "g6pd7ruwbh3q2kunhkpqmmljgmr2zazp",
+          "build_hash": "qtsvfhly53va6jpw7uxos4xwluawfv6o",
           "type": [
             "build",
             "link"

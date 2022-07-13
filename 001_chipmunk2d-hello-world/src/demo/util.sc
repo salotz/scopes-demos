@@ -29,6 +29,24 @@ fn rl-to-cp-vec (rl-vec)
         ((rl-vec . x) as f64)
         ((rl-vec . y) as f64)
 
+
+inline container-repr (obj)
+    """"Function to automate the building of __repr metamethods for container structs.
+
+
+inline run-repl (scope)
+    """"Will start up the repl with all of the current locals injected
+        into the environment.
+
+    let final_scope = (.. (globals) scope)
+
+    if main-module?
+        run-stage;
+
+    if main-module?
+        using import console
+        read-eval-print-loop final_scope false
+
 do
     let
         sleep!
@@ -37,5 +55,7 @@ do
         rl-to-cp-vec
         cpVec
         rlVec
+        # container-repr
+        run-repl
 
     (locals)
