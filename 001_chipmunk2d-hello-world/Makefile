@@ -7,9 +7,13 @@ test:
 repl:
 	scopes -e
 
+env: .spack-env
+.PHONY: env
+
 .spack-env: spack.yaml
 	spack env create -d .
 	spack -e . install --reuse
+	echo "activate with: spacktivate ."
 
 clean:
 	rm -rf .spack-env

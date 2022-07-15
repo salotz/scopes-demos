@@ -1,9 +1,0 @@
-
-** Setting Up Envs for Each of Them
-
-#+begin_src bash
-  cd XXX_demo-name
-  spack env create -d .
-  spack -e . install
-  spacktivate .
-#+end_src
