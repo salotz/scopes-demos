@@ -18,3 +18,14 @@ them.
   spacktivate .
   make run
 ```
+
+
+## Creating a New Demo
+
+You can use the template for a quick start (requires `copier` > 6):
+
+```sh
+copier template
+```
+
+To update the
